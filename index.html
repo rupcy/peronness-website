@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PERONNESS USHERING & GUARD | Event Security & Ushers</title>
+  <title>PERONNESS USHERING AND GUARD | Event Planner</title>
 
   <meta
     name="description"
-    content="PERONNESS USHERING & GUARD provides professional ushering, event security, guest management and event support."
+    content="PERONNESS USHERING AND GUARD - Professional event planning, ushering, security and event support."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +20,6 @@
   >
 
   <style>
-
-    /* =========================================
-       RESET
-    ========================================= */
 
     * {
       margin: 0;
@@ -37,7 +33,7 @@
 
     body {
       background: #050505;
-      color: #ffffff;
+      color: #fff;
       font-family: "Inter", sans-serif;
       overflow-x: hidden;
     }
@@ -52,38 +48,20 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    textarea {
-      font-family: inherit;
-    }
-
-
-    /* =========================================
-       COLORS
-    ========================================= */
-
     :root {
       --black: #050505;
-      --black-soft: #0c0c0c;
-      --black-card: #111111;
-
+      --black2: #0c0c0c;
+      --card: #111111;
       --gold: #d4af37;
-      --gold-light: #e7ca68;
-
-      --red: #8f0000;
-      --red-dark: #650000;
-
-      --white: #ffffff;
-      --gray: #aaaaaa;
-
-      --gold-border: rgba(212, 175, 55, 0.24);
+      --gold-light: #e8cc69;
+      --red: #780000;
+      --gray: #999999;
     }
 
 
-    /* =========================================
+    /* =====================================
        HEADER
-    ========================================= */
+    ===================================== */
 
     header {
       position: fixed;
@@ -96,11 +74,11 @@
 
       padding: 13px 4%;
 
-      background: rgba(3, 3, 3, 0.88);
+      background: rgba(0,0,0,0.88);
 
       backdrop-filter: blur(14px);
 
-      border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+      border-bottom: 1px solid rgba(212,175,55,0.14);
     }
 
     .nav-container {
@@ -120,13 +98,11 @@
     .logo {
       font-family: "Playfair Display", serif;
 
-      font-size: 17px;
+      font-size: 16px;
 
       font-weight: 700;
 
       line-height: 1.05;
-
-      letter-spacing: 0.5px;
     }
 
     .logo span {
@@ -134,9 +110,9 @@
 
       color: var(--gold);
 
-      font-size: 8px;
-
       font-family: "Inter", sans-serif;
+
+      font-size: 8px;
 
       letter-spacing: 2px;
 
@@ -148,13 +124,11 @@
 
       justify-content: center;
 
-      align-items: center;
-
       gap: 21px;
     }
 
     nav a {
-      color: #dddddd;
+      color: #ddd;
 
       font-size: 10px;
 
@@ -180,40 +154,31 @@
     .nav-btn {
       padding: 8px 11px;
 
-      border-radius: 3px;
-
       font-size: 9px;
 
       font-weight: 700;
 
-      letter-spacing: 0.7px;
+      border-radius: 3px;
 
       white-space: nowrap;
-
-      transition: 0.3s;
     }
 
     .whatsapp-btn {
       background: #168f49;
-      color: #ffffff;
     }
 
     .call-btn {
-      background: #111111;
+      border: 1px solid rgba(212,175,55,0.4);
 
       color: var(--gold);
 
-      border: 1px solid var(--gold-border);
-    }
-
-    .nav-btn:hover {
-      transform: translateY(-2px);
+      background: #0b0b0b;
     }
 
 
-    /* =========================================
+    /* =====================================
        HERO
-    ========================================= */
+    ===================================== */
 
     .hero {
       position: relative;
@@ -224,25 +189,25 @@
 
       overflow: hidden;
 
-      background: #000000;
+      background: #000;
     }
 
     .hero-video {
       position: absolute;
 
-      top: 0;
-      left: 0;
+      inset: 0;
 
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
 
       opacity: 0.72;
 
-      pointer-events: none;
+      background: #000;
 
-      background: #000000;
+      pointer-events: none;
     }
 
     .hero-overlay {
@@ -253,37 +218,37 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0, 0, 0, 0.86) 0%,
-          rgba(0, 0, 0, 0.52) 42%,
-          rgba(0, 0, 0, 0.28) 75%,
-          rgba(0, 0, 0, 0.72) 100%
+          rgba(0,0,0,0.88),
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.25)
         );
-
-      pointer-events: none;
     }
 
-    .hero-bottom-overlay {
+    .hero-bottom {
       position: absolute;
 
       left: 0;
       right: 0;
       bottom: 0;
 
-      height: 25%;
+      height: 30%;
 
       background:
         linear-gradient(
           transparent,
           #050505
         );
-
-      pointer-events: none;
     }
+
+
+    /* =====================================
+       HERO CONTENT
+    ===================================== */
 
     .hero-content {
       position: relative;
 
-      z-index: 3;
+      z-index: 5;
 
       height: 100%;
 
@@ -291,7 +256,7 @@
 
       margin: auto;
 
-      padding: 80px 7% 40px;
+      padding: 90px 7% 40px;
 
       display: flex;
 
@@ -299,14 +264,16 @@
 
       justify-content: center;
 
-      transform: translateY(0);
-
-      opacity: 1;
+      align-items: flex-start;
 
       will-change: transform, opacity;
+
+      transform: translate3d(0,0,0);
+
+      opacity: 1;
     }
 
-    .hero-small {
+    .hero-label {
       color: var(--gold);
 
       font-size: 10px;
@@ -315,41 +282,51 @@
 
       letter-spacing: 3px;
 
-      margin-bottom: 13px;
-
       text-transform: uppercase;
+
+      margin-bottom: 13px;
     }
 
     .hero-title {
-      max-width: 850px;
-
       font-family: "Playfair Display", serif;
 
-      font-size: clamp(43px, 7vw, 88px);
+      font-size: clamp(38px, 6.5vw, 82px);
 
       line-height: 0.98;
 
       letter-spacing: -2px;
 
       text-transform: uppercase;
+
+      max-width: 850px;
+
+      color: #fff;
     }
 
     .hero-title .gold {
       color: var(--gold);
     }
 
-    .hero-title .red {
-      color: var(--red);
+    .hero-subtitle {
+      margin-top: 17px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(24px, 3.2vw, 43px);
+
+      color: var(--gold);
+
+      letter-spacing: 0.5px;
     }
 
-    .hero-text {
-      max-width: 520px;
+    .hero-description {
+      max-width: 500px;
 
-      margin-top: 19px;
+      margin-top: 18px;
 
-      color: #d0d0d0;
+      color: #ccc;
 
-      font-size: 13px;
+      font-size: 12px;
 
       line-height: 1.7;
     }
@@ -359,21 +336,13 @@
 
       gap: 9px;
 
-      flex-wrap: wrap;
+      margin-top: 22px;
 
-      margin-top: 23px;
+      flex-wrap: wrap;
     }
 
     .hero-btn {
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
       padding: 11px 18px;
-
-      border-radius: 3px;
 
       font-size: 10px;
 
@@ -381,21 +350,21 @@
 
       letter-spacing: 1px;
 
+      border-radius: 3px;
+
       transition: 0.3s;
     }
 
-    .hero-btn-primary {
+    .hero-btn-main {
       background: var(--gold);
 
       color: #050505;
     }
 
-    .hero-btn-secondary {
-      border: 1px solid rgba(212, 175, 55, 0.6);
+    .hero-btn-second {
+      border: 1px solid rgba(212,175,55,0.6);
 
       color: var(--gold);
-
-      background: rgba(0,0,0,0.2);
     }
 
     .hero-btn:hover {
@@ -405,52 +374,42 @@
     .scroll-indicator {
       position: absolute;
 
-      z-index: 4;
+      z-index: 10;
 
-      bottom: 24px;
+      bottom: 22px;
 
       left: 50%;
 
       transform: translateX(-50%);
 
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      gap: 7px;
-
-      color: #aaa;
+      color: #999;
 
       font-size: 8px;
 
       letter-spacing: 2px;
 
-      text-transform: uppercase;
+      text-align: center;
 
-      transition: opacity 0.3s;
+      transition: opacity 0.2s;
     }
 
     .scroll-line {
       width: 1px;
 
-      height: 30px;
+      height: 28px;
 
       background: var(--gold);
+
+      margin: 7px auto 0;
     }
 
 
-    /* =========================================
-       GENERAL SECTIONS
-    ========================================= */
+    /* =====================================
+       SECTIONS
+    ===================================== */
 
     .content-section {
       padding: 65px 6%;
-
-      background: var(--black);
-
-      position: relative;
     }
 
     .section-inner {
@@ -468,15 +427,13 @@
 
       letter-spacing: 3px;
 
-      text-transform: uppercase;
-
       margin-bottom: 9px;
     }
 
     .section-title {
       font-family: "Playfair Display", serif;
 
-      font-size: clamp(34px, 5vw, 58px);
+      font-size: clamp(34px,5vw,58px);
 
       line-height: 1;
 
@@ -490,7 +447,7 @@
     .section-description {
       max-width: 620px;
 
-      color: #999;
+      color: var(--gray);
 
       font-size: 12px;
 
@@ -498,15 +455,15 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        ABOUT
-    ========================================= */
+    ===================================== */
 
     #about {
       background:
         radial-gradient(
           circle at 80% 20%,
-          rgba(212, 175, 55, 0.06),
+          rgba(212,175,55,0.06),
           transparent 30%
         ),
         #050505;
@@ -529,7 +486,7 @@
 
       background: #0c0c0c;
 
-      border: 1px solid var(--gold-border);
+      border: 1px solid rgba(212,175,55,0.22);
 
       display: flex;
 
@@ -539,9 +496,9 @@
     }
 
     .about-card h3 {
-      font-family: "Playfair Display", serif;
-
       color: var(--gold);
+
+      font-family: "Playfair Display", serif;
 
       font-size: 24px;
 
@@ -556,30 +513,10 @@
       line-height: 1.8;
     }
 
-    .about-image {
-      height: 300px;
 
-      overflow: hidden;
-
-      border: 1px solid var(--gold-border);
-
-      background: #0a0a0a;
-    }
-
-    .about-image img {
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      object-position: center;
-    }
-
-
-    /* =========================================
+    /* =====================================
        SERVICES
-    ========================================= */
+    ===================================== */
 
     #services {
       background: #080808;
@@ -590,7 +527,7 @@
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
 
       gap: 13px;
     }
@@ -628,19 +565,17 @@
     .service-card:hover {
       transform: translateY(-4px);
 
-      border-color: rgba(212,175,55,0.32);
+      border-color: rgba(212,175,55,0.35);
     }
 
     .service-number {
-      color: #777;
+      color: #666;
 
       font-size: 9px;
 
-      font-weight: 700;
-
       letter-spacing: 2px;
 
-      margin-bottom: 21px;
+      margin-bottom: 20px;
     }
 
     .service-card h3 {
@@ -652,7 +587,7 @@
     }
 
     .service-card p {
-      color: #8e8e8e;
+      color: #8d8d8d;
 
       font-size: 11px;
 
@@ -660,9 +595,9 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        TEAM
-    ========================================= */
+    ===================================== */
 
     #team {
       background: #050505;
@@ -673,7 +608,7 @@
 
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
 
       gap: 16px;
     }
@@ -681,13 +616,13 @@
     .team-card {
       height: 320px;
 
-      position: relative;
-
       overflow: hidden;
+
+      position: relative;
 
       background: #0b0b0b;
 
-      border: 1px solid var(--gold-border);
+      border: 1px solid rgba(212,175,55,0.2);
     }
 
     .team-card img {
@@ -698,21 +633,13 @@
       object-fit: cover;
 
       object-position: center;
-
-      transition: transform 0.5s;
-    }
-
-    .team-card:hover img {
-      transform: scale(1.03);
     }
 
     .team-overlay {
       position: absolute;
 
       left: 0;
-
       right: 0;
-
       bottom: 0;
 
       padding: 35px 20px 17px;
@@ -720,7 +647,7 @@
       background:
         linear-gradient(
           transparent,
-          rgba(0,0,0,0.94)
+          rgba(0,0,0,0.95)
         );
     }
 
@@ -735,17 +662,15 @@
 
       font-size: 9px;
 
-      letter-spacing: 1.8px;
+      letter-spacing: 1.5px;
 
       margin-top: 4px;
-
-      text-transform: uppercase;
     }
 
 
-    /* =========================================
+    /* =====================================
        GALLERY
-    ========================================= */
+    ===================================== */
 
     #gallery {
       background: #080808;
@@ -756,7 +681,7 @@
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
 
       gap: 9px;
     }
@@ -766,9 +691,7 @@
 
       overflow: hidden;
 
-      background: #0c0c0c;
-
-      border: 1px solid rgba(255,255,255,0.04);
+      background: #0b0b0b;
     }
 
     .gallery-item img {
@@ -779,27 +702,15 @@
       object-fit: cover;
 
       object-position: center;
-
-      transition: transform 0.5s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.03);
     }
 
 
-    /* =========================================
+    /* =====================================
        CONTACT
-    ========================================= */
+    ===================================== */
 
     #contact {
-      background:
-        radial-gradient(
-          circle at 50% 20%,
-          rgba(212,175,55,0.05),
-          transparent 35%
-        ),
-        #050505;
+      background: #050505;
     }
 
     .contact-grid {
@@ -818,17 +729,9 @@
       background: #0a0a0a;
 
       border-left: 2px solid var(--gold);
-
-      border-top: 1px solid rgba(212,175,55,0.08);
-
-      border-bottom: 1px solid rgba(212,175,55,0.08);
     }
 
-    .contact-info .section-title {
-      font-size: clamp(35px, 5vw, 52px);
-    }
-
-    .contact-info > p {
+    .contact-info p {
       color: #999;
 
       font-size: 11px;
@@ -851,8 +754,6 @@
 
       letter-spacing: 2px;
 
-      text-transform: uppercase;
-
       margin-bottom: 4px;
     }
 
@@ -863,16 +764,16 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        FORM
-    ========================================= */
+    ===================================== */
 
     .inquiry-form {
       padding: 23px;
 
       background: #0d0d0d;
 
-      border: 1px solid var(--gold-border);
+      border: 1px solid rgba(212,175,55,0.22);
     }
 
     .inquiry-form h3 {
@@ -906,11 +807,9 @@
 
       font-size: 8px;
 
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
 
       margin-bottom: 5px;
-
-      text-transform: uppercase;
     }
 
     .form-group input,
@@ -921,7 +820,7 @@
 
       background: #050505;
 
-      color: #ffffff;
+      color: white;
 
       border: 1px solid #252525;
 
@@ -943,15 +842,10 @@
       resize: vertical;
     }
 
-
-    /* =========================================
-       EVENT OPTIONS
-    ========================================= */
-
     .event-options {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
 
       gap: 6px;
     }
@@ -974,14 +868,12 @@
       font-size: 9px;
 
       cursor: pointer;
-
-      transition: 0.2s;
     }
 
     .event-option:hover {
       border-color: var(--gold);
 
-      color: #ffffff;
+      color: white;
     }
 
     .event-option input {
@@ -1005,23 +897,15 @@
 
       font-weight: 800;
 
-      letter-spacing: 1.3px;
+      letter-spacing: 1.2px;
 
       cursor: pointer;
-
-      transition: 0.3s;
-    }
-
-    .submit-btn:hover {
-      background: var(--gold-light);
-
-      transform: translateY(-2px);
     }
 
 
-    /* =========================================
+    /* =====================================
        FOOTER
-    ========================================= */
+    ===================================== */
 
     footer {
       padding: 27px 6%;
@@ -1065,14 +949,12 @@
       color: var(--gold);
 
       font-size: 10px;
-
-      font-weight: 600;
     }
 
 
-    /* =========================================
-       FLOATING WHATSAPP
-    ========================================= */
+    /* =====================================
+       WHATSAPP
+    ===================================== */
 
     .floating-whatsapp {
       position: fixed;
@@ -1097,25 +979,17 @@
 
       background: #168f49;
 
-      color: #ffffff;
+      color: white;
 
       font-size: 19px;
-
-      box-shadow: 0 5px 20px rgba(0,0,0,0.45);
-
-      transition: 0.3s;
-    }
-
-    .floating-whatsapp:hover {
-      transform: scale(1.08);
     }
 
 
-    /* =========================================
+    /* =====================================
        MOBILE
-    ========================================= */
+    ===================================== */
 
-    @media (max-width: 950px) {
+    @media(max-width:950px) {
 
       .nav-container {
         grid-template-columns: 1fr auto;
@@ -1125,22 +999,8 @@
         display: none;
       }
 
-      .nav-actions {
-        justify-content: flex-end;
-      }
-
       .hero {
         height: 100vh;
-
-        min-height: 580px;
-      }
-
-      .hero-content {
-        padding: 90px 6% 40px;
-      }
-
-      .hero-title {
-        font-size: clamp(38px, 11vw, 65px);
       }
 
       .about-grid,
@@ -1160,34 +1020,10 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .about-image {
-        height: 260px;
-      }
-
-      .team-card {
-        height: 280px;
-      }
-
-      .gallery-item {
-        height: 175px;
-      }
-
     }
 
 
-    @media (max-width: 600px) {
-
-      header {
-        padding: 11px 4%;
-      }
-
-      .logo {
-        font-size: 14px;
-      }
-
-      .logo span {
-        font-size: 7px;
-      }
+    @media(max-width:600px) {
 
       .call-btn {
         display: none;
@@ -1208,37 +1044,21 @@
       }
 
       .hero-title {
-        font-size: clamp(34px, 13vw, 55px);
+        font-size: clamp(34px,12vw,55px);
 
         letter-spacing: -1px;
       }
 
-      .hero-text {
+      .hero-subtitle {
+        font-size: 25px;
+      }
+
+      .hero-description {
         font-size: 11px;
-
-        max-width: 420px;
-      }
-
-      .section-title {
-        font-size: 37px;
-      }
-
-      .about-card {
-        min-height: 250px;
-
-        padding: 22px;
-      }
-
-      .about-image {
-        height: 220px;
       }
 
       .services-grid {
         grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 175px;
       }
 
       .team-grid {
@@ -1288,27 +1108,41 @@
 <body>
 
 
-  <!-- =========================================
+  <!-- =====================================
        HEADER
-  ========================================= -->
+  ===================================== -->
 
   <header>
 
     <div class="nav-container">
 
       <a href="#home" class="logo">
+
         PERONNESS
-        <span>USHERING & GUARD</span>
+
+        <span>
+          USHERING & GUARD
+        </span>
+
       </a>
 
+
       <nav>
+
         <a href="#home">HOME</a>
+
         <a href="#about">ABOUT</a>
+
         <a href="#services">SERVICES</a>
+
         <a href="#team">TEAM</a>
+
         <a href="#gallery">GALLERY</a>
+
         <a href="#contact">CONTACT</a>
+
       </nav>
+
 
       <div class="nav-actions">
 
@@ -1335,11 +1169,15 @@
 
 
 
-  <!-- =========================================
-       HERO
-  ========================================= -->
+  <!-- =====================================
+       HOME / HERO
+  ===================================== -->
 
-  <section class="hero" id="home">
+  <section
+    class="hero"
+    id="home"
+  >
+
 
     <video
       id="heroVideo"
@@ -1350,33 +1188,48 @@
       preload="auto"
     ></video>
 
+
     <div class="hero-overlay"></div>
 
-    <div class="hero-bottom-overlay"></div>
+    <div class="hero-bottom"></div>
 
 
-    <div class="hero-content" id="heroContent">
+    <!--
+      THIS ENTIRE BLOCK MOVES TOGETHER
+      WITH THE VIDEO.
+    -->
 
-      <div class="hero-small">
-        Professional Event Support
+    <div
+      class="hero-content"
+      id="heroContent"
+    >
+
+      <div class="hero-label">
+        PROFESSIONAL EVENT SERVICES
       </div>
 
 
       <h1 class="hero-title">
 
-        WE <span class="gold">PROTECT.</span><br>
+        PERONNESS<br>
 
-        WE <span class="gold">WELCOME.</span><br>
-
-        WE <span class="red">DELIVER.</span>
+        <span class="gold">
+          USHERING AND GUARD
+        </span>
 
       </h1>
 
 
-      <p class="hero-text">
+      <div class="hero-subtitle">
+        Event Planner
+      </div>
 
-        Professional ushering, event security and guest management
-        for weddings, parties, corporate events and special occasions.
+
+      <p class="hero-description">
+
+        Professional event planning, ushering, guest management
+        and security services for weddings, parties, corporate
+        events and special occasions.
 
       </p>
 
@@ -1385,16 +1238,17 @@
 
         <a
           href="#contact"
-          class="hero-btn hero-btn-primary"
+          class="hero-btn hero-btn-main"
         >
           BOOK OUR SERVICES
         </a>
 
+
         <a
           href="#services"
-          class="hero-btn hero-btn-secondary"
+          class="hero-btn hero-btn-second"
         >
-          EXPLORE SERVICES
+          OUR SERVICES
         </a>
 
       </div>
@@ -1402,9 +1256,12 @@
     </div>
 
 
-    <div class="scroll-indicator" id="scrollIndicator">
+    <div
+      class="scroll-indicator"
+      id="scrollIndicator"
+    >
 
-      <span>SCROLL</span>
+      SCROLL
 
       <div class="scroll-line"></div>
 
@@ -1414,21 +1271,26 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        ABOUT
-  ========================================= -->
+  ===================================== -->
 
-  <section class="content-section" id="about">
+  <section
+    class="content-section"
+    id="about"
+  >
 
     <div class="section-inner">
 
       <div class="about-grid">
+
 
         <div>
 
           <div class="section-label">
             ABOUT PERONNESS
           </div>
+
 
           <h2 class="section-title">
 
@@ -1437,6 +1299,7 @@
             <span>RELIABLE.</span>
 
           </h2>
+
 
           <p class="section-description">
 
@@ -1453,9 +1316,13 @@
         <div class="about-card">
 
           <h3>
+
             Your Event.<br>
+
             Our Responsibility.
+
           </h3>
+
 
           <p>
 
@@ -1468,6 +1335,7 @@
 
         </div>
 
+
       </div>
 
     </div>
@@ -1476,11 +1344,14 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        SERVICES
-  ========================================= -->
+  ===================================== -->
 
-  <section class="content-section" id="services">
+  <section
+    class="content-section"
+    id="services"
+  >
 
     <div class="section-inner">
 
@@ -1488,9 +1359,13 @@
         WHAT WE DO
       </div>
 
+
       <h2 class="section-title">
+
         OUR <span>SERVICES</span>
+
       </h2>
+
 
       <p class="section-description">
 
@@ -1505,13 +1380,17 @@
 
         <div class="service-card">
 
-          <div class="service-number">01</div>
+          <div class="service-number">
+            01
+          </div>
 
-          <h3>Event Ushers</h3>
+          <h3>
+            Event Planning
+          </h3>
 
           <p>
-            Professional ushers to welcome guests, provide directions,
-            assist with seating and help maintain an organized event.
+            Professional event planning and coordination designed
+            to help create a smooth and memorable occasion.
           </p>
 
         </div>
@@ -1519,13 +1398,17 @@
 
         <div class="service-card">
 
-          <div class="service-number">02</div>
+          <div class="service-number">
+            02
+          </div>
 
-          <h3>Event Security</h3>
+          <h3>
+            Event Ushers
+          </h3>
 
           <p>
-            Reliable security personnel to help protect guests,
-            staff, property and event spaces.
+            Professional ushers to welcome guests, provide
+            directions and assist with seating.
           </p>
 
         </div>
@@ -1533,13 +1416,35 @@
 
         <div class="service-card">
 
-          <div class="service-number">03</div>
+          <div class="service-number">
+            03
+          </div>
 
-          <h3>Guest Management</h3>
+          <h3>
+            Event Security
+          </h3>
+
+          <p>
+            Reliable personnel to help protect guests, property
+            and event spaces.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            04
+          </div>
+
+          <h3>
+            Guest Management
+          </h3>
 
           <p>
             Organized guest reception, movement management and
-            professional assistance throughout your event.
+            professional assistance.
           </p>
 
         </div>
@@ -1547,13 +1452,17 @@
 
         <div class="service-card">
 
-          <div class="service-number">04</div>
+          <div class="service-number">
+            05
+          </div>
 
-          <h3>Crowd Control</h3>
+          <h3>
+            Crowd Control
+          </h3>
 
           <p>
-            Structured crowd management designed to keep entrances,
-            exits and event areas organized.
+            Structured crowd management for entrances, exits
+            and event areas.
           </p>
 
         </div>
@@ -1561,27 +1470,17 @@
 
         <div class="service-card">
 
-          <div class="service-number">05</div>
+          <div class="service-number">
+            06
+          </div>
 
-          <h3>VIP Assistance</h3>
-
-          <p>
-            Professional support for VIP guests, special visitors
-            and important event participants.
-          </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-          <div class="service-number">06</div>
-
-          <h3>Event Support</h3>
+          <h3>
+            VIP Assistance
+          </h3>
 
           <p>
-            Flexible event personnel available to assist with
-            different event-day responsibilities.
+            Professional support for VIP guests and important
+            event participants.
           </p>
 
         </div>
@@ -1595,11 +1494,14 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        TEAM
-  ========================================= -->
+  ===================================== -->
 
-  <section class="content-section" id="team">
+  <section
+    class="content-section"
+    id="team"
+  >
 
     <div class="section-inner">
 
@@ -1607,14 +1509,18 @@
         OUR PEOPLE
       </div>
 
+
       <h2 class="section-title">
+
         MEET THE <span>TEAM</span>
+
       </h2>
+
 
       <p class="section-description">
 
-        A professional team prepared to support your guests and
-        protect your event.
+        A professional team prepared to support your guests
+        and protect your event.
 
       </p>
 
@@ -1629,6 +1535,7 @@
             alt="PERONNESS security team"
             loading="lazy"
           >
+
 
           <div class="team-overlay">
 
@@ -1653,6 +1560,7 @@
             loading="lazy"
           >
 
+
           <div class="team-overlay">
 
             <h3>
@@ -1676,11 +1584,14 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        GALLERY
-  ========================================= -->
+  ===================================== -->
 
-  <section class="content-section" id="gallery">
+  <section
+    class="content-section"
+    id="gallery"
+  >
 
     <div class="section-inner">
 
@@ -1688,9 +1599,13 @@
         OUR WORK
       </div>
 
+
       <h2 class="section-title">
+
         EVENT <span>GALLERY</span>
+
       </h2>
+
 
       <p class="section-description">
 
@@ -1764,11 +1679,14 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        CONTACT
-  ========================================= -->
+  ===================================== -->
 
-  <section class="content-section" id="contact">
+  <section
+    class="content-section"
+    id="contact"
+  >
 
     <div class="section-inner">
 
@@ -1781,6 +1699,7 @@
             LET'S WORK TOGETHER
           </div>
 
+
           <h2 class="section-title">
 
             PLAN YOUR<br>
@@ -1788,6 +1707,7 @@
             <span>EVENT.</span>
 
           </h2>
+
 
           <p>
 
@@ -1817,7 +1737,7 @@
             </small>
 
             <strong>
-              Ushers • Security • Event Support
+              Event Planning • Ushers • Security
             </strong>
 
           </div>
@@ -2034,21 +1954,28 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        FOOTER
-  ========================================= -->
+  ===================================== -->
 
   <footer>
 
     <div class="footer-inner">
 
       <div class="footer-logo">
-        PERONNESS <span>USHERING & GUARD</span>
+
+        PERONNESS
+        <span>USHERING & GUARD</span>
+
       </div>
 
+
       <div class="footer-copy">
+
         © 2026 PERONNESS. All Rights Reserved.
+
       </div>
+
 
       <a
         href="tel:+2348060264514"
@@ -2063,110 +1990,104 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        FLOATING WHATSAPP
-  ========================================= -->
+  ===================================== -->
 
   <a
     href="https://wa.me/2348060264514"
-    class="floating-whatsapp"
     target="_blank"
-    aria-label="Chat with PERONNESS on WhatsApp"
+    class="floating-whatsapp"
+    aria-label="WhatsApp"
   >
     ☎
   </a>
 
 
 
-  <!-- =========================================
+  <!-- =====================================
        JAVASCRIPT
-  ========================================= -->
+  ===================================== -->
 
   <script>
 
-    /* =========================================
-       SCROLL CONTROLLED HERO
-       
-       The video and text use the SAME progress.
-       This keeps them moving together.
-    ========================================= */
+    /* =====================================
+       HERO VIDEO + TEXT SCROLL ANIMATION
+    ===================================== */
 
-    const hero = document.querySelector(".hero");
+    const hero =
+      document.getElementById("home");
 
-    const heroVideo = document.getElementById("heroVideo");
+    const video =
+      document.getElementById("heroVideo");
 
-    const heroContent = document.getElementById("heroContent");
+    const heroContent =
+      document.getElementById("heroContent");
 
     const scrollIndicator =
       document.getElementById("scrollIndicator");
 
 
-    let videoReady = false;
-
-    let targetVideoTime = 0;
-
-    let currentVideoTime = 0;
-
-    let animationRunning = false;
+    let videoLoaded = false;
 
 
     /*
-      Check when video metadata is ready.
+      Wait until the browser knows the
+      video duration.
     */
 
-    heroVideo.addEventListener("loadedmetadata", function() {
+    video.addEventListener(
+      "loadedmetadata",
+      function() {
 
-      videoReady = true;
+        videoLoaded = true;
 
-      currentVideoTime = 0;
+        video.currentTime = 0;
 
-      targetVideoTime = 0;
-
-      heroVideo.currentTime = 0;
-
-    });
+      }
+    );
 
 
     /*
-      If the video cannot load, log the problem.
-      The rest of the website will still work.
+      Calculate scroll progress through
+      the HOME section.
     */
 
-    heroVideo.addEventListener("error", function() {
+    function getProgress() {
 
-      console.log(
-        "Hero video could not be loaded. Check that hero-video.mp4 is in the same folder as index.html."
-      );
+      const top =
+        window.scrollY;
 
-    });
+      const heroStart =
+        hero.offsetTop;
 
-
-    /*
-      Calculate how far the user has scrolled
-      through the hero.
-    */
-
-    function getHeroProgress() {
-
-      const scrollTop = window.scrollY;
-
-      const heroTop = hero.offsetTop;
-
-      const heroHeight =
-        hero.offsetHeight - window.innerHeight;
+      const heroScrollDistance =
+        hero.offsetHeight -
+        window.innerHeight;
 
 
-      if (heroHeight <= 0) {
+      if (
+        heroScrollDistance <= 0
+      ) {
+
         return 0;
+
       }
 
 
       let progress =
-        (scrollTop - heroTop) / heroHeight;
+        (top - heroStart) /
+        heroScrollDistance;
 
 
       progress =
-        Math.max(0, Math.min(1, progress));
+        Math.max(
+          0,
+          Math.min(
+            1,
+            progress
+          )
+        );
 
 
       return progress;
@@ -2175,190 +2096,140 @@
 
 
     /*
-      Update the target video position and text.
+      This function controls BOTH:
+      
+      1. Video
+      2. Text
+      
+      using exactly the same progress.
     */
 
-    function updateHero() {
+    function animateHero() {
 
-      const progress = getHeroProgress();
+      const progress =
+        getProgress();
 
 
-      /* -----------------------------------------
-         VIDEO
-      ----------------------------------------- */
+      /* =================================
+         VIDEO MOVEMENT
+      ================================= */
 
-      if (videoReady && heroVideo.duration) {
+      if (
+        videoLoaded &&
+        video.duration
+      ) {
 
-        targetVideoTime =
-          progress * heroVideo.duration;
+        const videoPosition =
+          progress * video.duration;
+
+
+        /*
+          Directly set video position.
+          This means:
+          
+          scroll down = video forward
+          scroll up = video backward
+        */
+
+        video.currentTime =
+          videoPosition;
 
       }
 
 
-      /* -----------------------------------------
-         TEXT + VIDEO USE SAME PROGRESS
-      ----------------------------------------- */
+      /* =================================
+         TEXT MOVEMENT
+      ================================= */
 
-      const moveAmount =
-        progress * 95;
+      /*
+        The text moves upward as the
+        video moves forward.
+      */
+
+      const moveY =
+        progress * -180;
 
 
-      const fadeAmount =
+      /*
+        Text slightly scales down.
+      */
+
+      const scale =
+        1 - (progress * 0.08);
+
+
+      /*
+        Text gradually fades.
+      */
+
+      const opacity =
         Math.max(
           0,
-          1 - progress * 1.35
+          1 - (progress * 1.15)
         );
 
 
       heroContent.style.transform =
-        `translateY(${moveAmount}px)`;
+        `translate3d(0, ${moveY}px, 0) scale(${scale})`;
 
 
       heroContent.style.opacity =
-        fadeAmount;
+        opacity;
 
 
-      /* -----------------------------------------
+      /* =================================
          SCROLL INDICATOR
-      ----------------------------------------- */
+      ================================= */
 
       scrollIndicator.style.opacity =
-        Math.max(0, 1 - progress * 4);
-
-
-      startAnimation();
-
-    }
-
-
-    /*
-      Smoothly move the video toward the target.
-      This prevents harsh jumps.
-    */
-
-    function animateVideo() {
-
-      if (!videoReady || !heroVideo.duration) {
-
-        animationRunning = false;
-
-        return;
-
-      }
-
-
-      const difference =
-        targetVideoTime - currentVideoTime;
-
-
-      /*
-        Stop when close enough.
-      */
-
-      if (Math.abs(difference) < 0.005) {
-
-        currentVideoTime =
-          targetVideoTime;
-
-        heroVideo.currentTime =
-          currentVideoTime;
-
-        animationRunning = false;
-
-        return;
-
-      }
-
-
-      /*
-        Smooth movement.
-      */
-
-      currentVideoTime +=
-        difference * 0.18;
-
-
-      /*
-        Make sure the value never goes
-        outside the video duration.
-      */
-
-      currentVideoTime =
         Math.max(
           0,
-          Math.min(
-            heroVideo.duration,
-            currentVideoTime
-          )
+          1 - progress * 4
         );
 
-
-      heroVideo.currentTime =
-        currentVideoTime;
-
-
-      requestAnimationFrame(animateVideo);
-
     }
 
 
     /*
-      Start the video animation only when needed.
-    */
-
-    function startAnimation() {
-
-      if (animationRunning) {
-        return;
-      }
-
-      animationRunning = true;
-
-      requestAnimationFrame(animateVideo);
-
-    }
-
-
-    /*
-      Update when scrolling.
+      Listen for scrolling.
     */
 
     window.addEventListener(
       "scroll",
-      updateHero,
+      animateHero,
       { passive: true }
     );
 
 
     /*
-      Update once when page loads.
+      Run once when page loads.
     */
 
     window.addEventListener(
       "load",
-      updateHero
+      animateHero
     );
 
 
     /*
-      IMPORTANT:
-      The video never plays automatically.
-      It only changes position when scrolling.
+      Video must NOT autoplay.
     */
 
-    heroVideo.pause();
+    video.pause();
 
 
 
-    /* =========================================
+    /* =====================================
        WHATSAPP FORM
-    ========================================= */
+    ===================================== */
 
-    const inquiryForm =
-      document.getElementById("inquiryForm");
+    const form =
+      document.getElementById(
+        "inquiryForm"
+      );
 
 
-    inquiryForm.addEventListener(
+    form.addEventListener(
       "submit",
       function(event) {
 
@@ -2406,10 +2277,6 @@
             .trim();
 
 
-        /*
-          Get selected events.
-        */
-
         const selectedEvents = [];
 
 
@@ -2417,18 +2284,16 @@
           .querySelectorAll(
             '.event-option input[type="checkbox"]:checked'
           )
-          .forEach(function(checkbox) {
+          .forEach(
+            function(checkbox) {
 
-            selectedEvents.push(
-              checkbox.value
-            );
+              selectedEvents.push(
+                checkbox.value
+              );
 
-          });
+            }
+          );
 
-
-        /*
-          Require at least one event type.
-        */
 
         if (
           selectedEvents.length === 0
@@ -2443,15 +2308,11 @@
         }
 
 
-        /*
-          Build WhatsApp message.
-        */
-
         const whatsappMessage =
 
-`Hello PERONNESS USHERING & GUARD,
+`Hello PERONNESS USHERING AND GUARD,
 
-I would like to make an inquiry about your event services.
+I would like to make an inquiry about your event planning and event services.
 
 Full Name: ${fullName}
 
@@ -2473,27 +2334,15 @@ Please let me know the available packages and pricing.
 Thank you.`;
 
 
-        /*
-          Encode message.
-        */
-
         const encodedMessage =
           encodeURIComponent(
             whatsappMessage
           );
 
 
-        /*
-          WhatsApp URL.
-        */
-
         const whatsappURL =
           `https://wa.me/2348060264514?text=${encodedMessage}`;
 
-
-        /*
-          Open WhatsApp.
-        */
 
         window.open(
           whatsappURL,
@@ -2504,7 +2353,6 @@ Thank you.`;
     );
 
   </script>
-
 
 </body>
 </html>
