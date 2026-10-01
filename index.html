@@ -14,9 +14,9 @@
 
 <style>
 
-/* =========================
+/* =====================================================
    GLOBAL
-========================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -29,27 +29,30 @@ html {
 }
 
 body {
-    background: #f8f6f0;
-    color: #171717;
+    background: #050505;
+    color: #ffffff;
     font-family: "Inter", sans-serif;
 }
 
 :root {
-    --gold: #b89445;
-    --dark-gold: #8d6d2f;
-    --cream: #f8f6f0;
+    --black: #050505;
+    --black2: #0d0d0d;
     --white: #ffffff;
-    --black: #171717;
-    --light-gold: #d7c28b;
+    --gold: #c6a15b;
+    --gold-light: #e2c477;
+    --red: #b5121b;
+    --red-light: #e52a34;
+    --gray: #999999;
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -60,7 +63,9 @@ body {
     z-index: 1000;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     color: white;
@@ -78,7 +83,8 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+
+    gap: 28px;
 }
 
 .nav-links a {
@@ -94,19 +100,20 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--light-gold);
+    color: var(--gold-light);
 }
 
 
-/* =========================
-   CONTACT BUTTONS
-========================= */
+/* =====================================================
+   WHATSAPP + CALL
+===================================================== */
 
 .contact-buttons {
     position: fixed;
 
     top: 22px;
-    left: 5%;
+
+    right: 5%;
 
     z-index: 2000;
 
@@ -146,7 +153,8 @@ body {
     color: white;
 
     box-shadow:
-        0 8px 25px rgba(37,211,102,.25);
+        0 8px 25px
+        rgba(37,211,102,.25);
 }
 
 .whatsapp-button:hover {
@@ -159,35 +167,36 @@ body {
 /* CALL */
 
 .call-button {
-    background: rgba(255,255,255,.95);
+    background: #111111;
 
-    color: #8d6d2f;
+    color: var(--gold-light);
 
-    border: 1px solid #d4b96c;
+    border: 1px solid var(--gold);
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,.15);
+        0 8px 25px
+        rgba(0,0,0,.4);
 }
 
 .call-button:hover {
-    background: #b89445;
+    background: var(--gold);
 
-    color: white;
+    color: #000;
 
     transform: translateY(-2px);
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .video-section {
     height: 180vh;
 
     position: relative;
 
-    background: #000;
+    background: black;
 }
 
 .video-sticky {
@@ -201,7 +210,7 @@ body {
 
     overflow: hidden;
 
-    background: #000;
+    background: black;
 }
 
 .hero-video {
@@ -225,20 +234,21 @@ body {
 
     background:
         linear-gradient(
-            rgba(0,0,0,.20),
-            rgba(0,0,0,.42)
+            rgba(0,0,0,.30),
+            rgba(0,0,0,.60)
         );
 }
 
 
-/* =========================
-   CENTER HERO CONTENT
-========================= */
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content {
     position: absolute;
 
     left: 50%;
+
     top: 50%;
 
     transform:
@@ -293,17 +303,17 @@ body {
 }
 
 .hero-content h1 span {
-    color: #e2c77d;
+    color: var(--gold-light);
 
     font-style: italic;
 }
 
 .hero-line {
-    width: 80px;
+    width: 90px;
 
-    height: 1px;
+    height: 2px;
 
-    background: #d8bd72;
+    background: var(--red);
 
     margin: 30px auto 20px;
 }
@@ -319,9 +329,9 @@ body {
 }
 
 
-/* =========================
-   SCROLL INDICATOR
-========================= */
+/* =====================================================
+   SCROLL
+===================================================== */
 
 .scroll-indicator {
     position: absolute;
@@ -330,7 +340,8 @@ body {
 
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     color: white;
 
@@ -348,22 +359,22 @@ body {
 
     height: 40px;
 
-    background: #d8bd72;
+    background: var(--gold);
 
     margin: 10px auto 0;
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 .section {
     min-height: 100vh;
 
     padding: 110px 7%;
 
-    background: var(--cream);
+    background: var(--black);
 }
 
 .section-title {
@@ -382,19 +393,23 @@ body {
 
     line-height: 1;
 
-    color: var(--black);
+    color: white;
 
     margin-bottom: 60px;
 }
 
 .gold-text {
-    color: var(--gold);
+    color: var(--gold-light);
+}
+
+.red-text {
+    color: var(--red-light);
 }
 
 
-/* =========================
+/* =====================================================
    SERVICES
-========================= */
+===================================================== */
 
 .services {
     display: grid;
@@ -410,9 +425,9 @@ body {
 
     padding: 32px;
 
-    background: white;
+    background: #0b0b0b;
 
-    border: 1px solid #e4dcc9;
+    border: 1px solid #292929;
 
     position: relative;
 
@@ -425,15 +440,22 @@ body {
     position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
 
     height: 3px;
 
-    background: var(--gold);
+    background:
+        linear-gradient(
+            90deg,
+            var(--red),
+            var(--gold)
+        );
 
-    transform: scaleX(0);
+    transform:
+        scaleX(0);
 
     transform-origin: left;
 
@@ -445,10 +467,15 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--gold);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.08);
+        0 20px 50px
+        rgba(0,0,0,.5);
 }
 
 .service-number {
@@ -474,7 +501,7 @@ body {
 }
 
 .service-card p {
-    color: #777;
+    color: #999;
 
     font-size: 13px;
 
@@ -482,9 +509,112 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
+   TEAM
+===================================================== */
+
+.team-section {
+    background:
+        linear-gradient(
+            180deg,
+            #050505,
+            #0b0b0b
+        );
+}
+
+.team-intro {
+    max-width: 600px;
+
+    color: #999;
+
+    line-height: 1.8;
+
+    margin-top: -30px;
+
+    margin-bottom: 55px;
+}
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.team-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border: 1px solid #2c2c2c;
+}
+
+.team-card img {
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform .6s;
+}
+
+.team-card:hover img {
+    transform:
+        scale(1.04);
+}
+
+.team-overlay {
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.95)
+        );
+}
+
+.team-overlay small {
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.team-overlay h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
    GALLERY
-========================= */
+===================================================== */
 
 .gallery {
     display: grid;
@@ -502,22 +632,33 @@ body {
 
     object-fit: cover;
 
-    background: #e9e4d8;
+    background: #111;
+
+    border: 1px solid #222;
 
     transition: .5s;
 }
 
 .gallery img:hover {
-    transform: scale(.98);
+    transform:
+        scale(.98);
+
+    border-color:
+        var(--gold);
 }
 
 
-/* =========================
-   INQUIRY SECTION
-========================= */
+/* =====================================================
+   INQUIRY
+===================================================== */
 
 .inquiry {
-    background: white;
+    background:
+        linear-gradient(
+            135deg,
+            #080808,
+            #111111
+        );
 }
 
 .inquiry-wrapper {
@@ -551,7 +692,7 @@ body {
 }
 
 .inquiry-title span {
-    color: var(--gold);
+    color: var(--gold-light);
 
     font-style: italic;
 }
@@ -559,7 +700,7 @@ body {
 .inquiry-text {
     margin-top: 30px;
 
-    color: #777;
+    color: #888;
 
     line-height: 1.8;
 
@@ -567,9 +708,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    FORM
-========================= */
+===================================================== */
 
 .inquiry-form {
     display: flex;
@@ -594,11 +735,11 @@ body {
 
     padding: 17px;
 
-    background: #faf9f5;
+    background: #101010;
 
-    border: 1px solid #ded6c3;
+    border: 1px solid #333;
 
-    color: #222;
+    color: white;
 
     font-family:
         "Inter",
@@ -609,22 +750,28 @@ body {
     font-size: 13px;
 }
 
+.inquiry-form input::placeholder,
+.inquiry-form textarea::placeholder {
+    color: #777;
+}
+
 .inquiry-form input:focus,
 .inquiry-form textarea:focus {
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
 }
 
 
-/* =========================
-   EVENT CHECKBOXES
-========================= */
+/* =====================================================
+   EVENT OPTIONS
+===================================================== */
 
 .event-box {
     padding: 20px;
 
-    background: #faf9f5;
+    background: #101010;
 
-    border: 1px solid #ded6c3;
+    border: 1px solid #333;
 }
 
 .event-label {
@@ -636,7 +783,7 @@ body {
 
     text-transform: uppercase;
 
-    color: #555;
+    color: #aaa;
 
     margin-bottom: 15px;
 }
@@ -647,7 +794,7 @@ body {
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 }
 
 .event-option {
@@ -659,7 +806,7 @@ body {
 
     font-size: 13px;
 
-    color: #555;
+    color: #aaa;
 
     cursor: pointer;
 }
@@ -667,24 +814,14 @@ body {
 .event-option input {
     width: auto;
 
-    accent-color: var(--gold);
+    accent-color:
+        var(--red);
 }
 
 
-/* =========================
-   TEXTAREA
-========================= */
-
-.inquiry-form textarea {
-    min-height: 130px;
-
-    resize: vertical;
-}
-
-
-/* =========================
+/* =====================================================
    SUBMIT
-========================= */
+===================================================== */
 
 .submit-button {
     padding: 19px;
@@ -694,8 +831,8 @@ body {
     background:
         linear-gradient(
             135deg,
-            #b89445,
-            #8d6d2f
+            var(--red),
+            #7d0b12
         );
 
     color: white;
@@ -712,23 +849,30 @@ body {
 }
 
 .submit-button:hover {
-    transform: translateY(-2px);
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #8d6d2f
+        );
 
-    box-shadow:
-        0 12px 30px rgba(141,109,47,.25);
+    color: black;
+
+    transform:
+        translateY(-2px);
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer {
     padding: 45px 7%;
 
-    background: #171717;
+    background: #020202;
 
-    color: #aaa;
+    color: #777;
 
     display: flex;
 
@@ -737,16 +881,20 @@ body {
     font-size: 11px;
 
     letter-spacing: 1px;
+
+    border-top:
+        1px solid #222;
 }
 
 .footer-gold {
-    color: #d4b96c;
+    color:
+        var(--gold-light);
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width: 850px) {
 
@@ -763,13 +911,14 @@ body {
     }
 
     .contact-buttons {
-        left: 20px;
+        right: 20px;
 
         top: 65px;
     }
 
     .contact-buttons a {
-        padding: 9px 12px;
+        padding:
+            9px 12px;
 
         font-size: 10px;
     }
@@ -797,11 +946,22 @@ body {
     }
 
     .services {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+    }
+
+    .team-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .team-card img {
+        height: 400px;
     }
 
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .gallery img {
@@ -809,21 +969,25 @@ body {
     }
 
     .inquiry-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 50px;
     }
 
     .form-row {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .event-options {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction:
+            column;
 
         gap: 15px;
     }
@@ -837,7 +1001,9 @@ body {
 <body>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav class="navbar">
 
@@ -847,20 +1013,34 @@ body {
 
     <div class="nav-links">
 
-        <a href="#home">HOME</a>
+        <a href="#home">
+            HOME
+        </a>
 
-        <a href="#services">SERVICES</a>
+        <a href="#services">
+            SERVICES
+        </a>
 
-        <a href="#gallery">GALLERY</a>
+        <a href="#team">
+            TEAM
+        </a>
 
-        <a href="#inquiry">INQUIRY</a>
+        <a href="#gallery">
+            GALLERY
+        </a>
+
+        <a href="#inquiry">
+            INQUIRY
+        </a>
 
     </div>
 
 </nav>
 
 
-<!-- ================= CONTACT BUTTONS ================= -->
+<!-- =====================================================
+     CONTACT BUTTONS
+===================================================== -->
 
 <div class="contact-buttons">
 
@@ -873,6 +1053,7 @@ body {
 
     </a>
 
+
     <a
         class="call-button"
         href="tel:+2348060264514">
@@ -884,13 +1065,16 @@ body {
 </div>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section
     class="video-section"
     id="home">
 
     <div class="video-sticky">
+
 
         <video
             id="heroVideo"
@@ -913,6 +1097,7 @@ body {
             class="hero-content"
             id="heroContent">
 
+
             <div class="hero-label">
 
                 PERONNESS USHERING & GUARD
@@ -926,7 +1111,9 @@ body {
 
                 <br>
 
-                <span>Our Excellence.</span>
+                <span>
+                    Our Excellence.
+                </span>
 
             </h1>
 
@@ -939,6 +1126,7 @@ body {
                 USHERING · EVENT SUPPORT · GUARD SERVICES
 
             </div>
+
 
         </div>
 
@@ -956,11 +1144,14 @@ body {
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section
     class="section"
     id="services">
+
 
     <h2 class="section-title">
 
@@ -1056,11 +1247,98 @@ body {
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =====================================================
+     TEAM
+===================================================== -->
+
+<section
+    class="section team-section"
+    id="team">
+
+
+    <h2 class="section-title">
+
+        Meet Our
+        <span class="gold-text">
+            Team
+        </span>
+
+    </h2>
+
+
+    <p class="team-intro">
+
+        Our team brings together dedicated
+        professionals supporting events,
+        guest management and guard services.
+
+    </p>
+
+
+    <div class="team-grid">
+
+
+        <!-- SECURITY TEAM -->
+
+        <div class="team-card">
+
+            <img
+                src="./security-team.jpg"
+                alt="PERONNESS Security Team">
+
+
+            <div class="team-overlay">
+
+                <small>
+                    PERONNESS
+                </small>
+
+                <h3>
+                    Security Team
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- WORKERS TEAM -->
+
+        <div class="team-card">
+
+            <img
+                src="./workers-team.jpg"
+                alt="PERONNESS Workers Team">
+
+
+            <div class="team-overlay">
+
+                <small>
+                    PERONNESS
+                </small>
+
+                <h3>
+                    Workers & Ushering Team
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
 <section
     class="section"
     id="gallery">
+
 
     <h2 class="section-title">
 
@@ -1074,45 +1352,56 @@ body {
 
     <div class="gallery">
 
+
         <img
             src="./gallery1.jpg"
             alt="Peronness event">
+
 
         <img
             src="./gallery2.jpg"
             alt="Peronness event">
 
+
         <img
             src="./gallery3.jpg"
             alt="Peronness event">
+
 
         <img
             src="./gallery4.jpg"
             alt="Peronness event">
 
+
         <img
             src="./gallery5.jpg"
             alt="Peronness event">
 
+
         <img
             src="./gallery6.jpg"
             alt="Peronness event">
+
 
     </div>
 
 </section>
 
 
-<!-- ================= INQUIRY ================= -->
+<!-- =====================================================
+     INQUIRY
+===================================================== -->
 
 <section
     class="section inquiry"
     id="inquiry">
 
+
     <div class="inquiry-wrapper">
 
 
         <div>
+
 
             <h2 class="inquiry-title">
 
@@ -1120,7 +1409,9 @@ body {
 
                 <br>
 
-                <span>Perfect Event.</span>
+                <span>
+                    Perfect Event.
+                </span>
 
             </h2>
 
@@ -1128,12 +1419,12 @@ body {
             <p class="inquiry-text">
 
                 Tell us what you are planning.
-                Select the type of event,
-                provide your details and send
-                your inquiry directly to
-                PERONNESS.
+                Select your event type, provide
+                your details and send your inquiry
+                directly to PERONNESS.
 
             </p>
+
 
         </div>
 
@@ -1144,6 +1435,7 @@ body {
 
 
             <div class="form-row">
+
 
                 <input
                     type="text"
@@ -1158,6 +1450,7 @@ body {
                     placeholder="Phone Number"
                     required>
 
+
             </div>
 
 
@@ -1165,9 +1458,10 @@ body {
 
             <div class="event-box">
 
+
                 <label class="event-label">
 
-                    What type of event are you planning?
+                    SELECT YOUR EVENT TYPE
 
                 </label>
 
@@ -1314,6 +1608,7 @@ body {
 
             <div class="form-row">
 
+
                 <input
                     type="date"
                     id="eventDate"
@@ -1325,6 +1620,7 @@ body {
                     id="location"
                     placeholder="Event Location"
                     required>
+
 
             </div>
 
@@ -1356,18 +1652,23 @@ body {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
+
 
     <div>
 
         PERONNESS
+
         <span class="footer-gold">
             USHERING & GUARD
         </span>
 
     </div>
+
 
     <div>
 
@@ -1375,14 +1676,15 @@ body {
 
     </div>
 
+
 </footer>
 
 
 <script>
 
-/* =========================
+/* =====================================================
    VIDEO SCROLL
-========================= */
+===================================================== */
 
 const video =
     document.getElementById(
@@ -1399,6 +1701,7 @@ const heroContent =
         "heroContent"
     );
 
+
 let targetProgress = 0;
 
 let currentProgress = 0;
@@ -1409,13 +1712,16 @@ function calculateScroll() {
     const rect =
         section.getBoundingClientRect();
 
+
     const scrollDistance =
         section.offsetHeight -
         window.innerHeight;
 
+
     targetProgress =
         -rect.top /
         scrollDistance;
+
 
     targetProgress =
         Math.max(
@@ -1425,10 +1731,12 @@ function calculateScroll() {
                 targetProgress
             )
         );
+
 }
 
 
 function animate() {
+
 
     currentProgress +=
         (
@@ -1446,10 +1754,9 @@ function animate() {
     }
 
 
-    /* HERO TEXT MOVEMENT */
-
     const move =
         currentProgress * -180;
+
 
     const scale =
         1 -
@@ -1494,6 +1801,7 @@ function animate() {
     requestAnimationFrame(
         animate
     );
+
 }
 
 
@@ -1505,24 +1813,27 @@ window.addEventListener(
     }
 );
 
+
 window.addEventListener(
     "resize",
     calculateScroll
 );
+
 
 video.addEventListener(
     "loadedmetadata",
     calculateScroll
 );
 
+
 calculateScroll();
 
 animate();
 
 
-/* =========================
+/* =====================================================
    INQUIRY FORM
-========================= */
+===================================================== */
 
 const form =
     document.getElementById(
@@ -1533,6 +1844,7 @@ const form =
 form.addEventListener(
     "submit",
     function(event) {
+
 
         event.preventDefault();
 
@@ -1628,6 +1940,7 @@ ${message}`;
         );
 
     }
+
 );
 
 </script>
