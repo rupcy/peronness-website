@@ -5,7 +5,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PERONNESS USHERING AND GUARD | Event Planner</title>
@@ -13,7 +12,7 @@
 <style>
 
 /* =========================
-   RESET
+   BASIC RESET
 ========================= */
 
 *{
@@ -29,13 +28,13 @@ html{
 body{
     background:#050505;
     color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     overflow-x:hidden;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 img{
@@ -55,59 +54,73 @@ header{
     width:100%;
     z-index:9999;
 
-    background:rgba(0,0,0,.88);
+    background:rgba(0,0,0,.92);
+
     backdrop-filter:blur(12px);
 
-    border-bottom:1px solid rgba(212,175,55,.22);
+    border-bottom:1px solid rgba(212,175,55,.25);
 }
 
 .nav{
-    width:100%;
     max-width:1250px;
-    margin:auto;
 
     min-height:65px;
 
-    padding:10px 22px;
+    margin:auto;
+
+    padding:10px 20px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    gap:20px;
+    gap:15px;
 }
 
 .logo{
     font-family:Georgia,serif;
+
     font-size:15px;
+
     font-weight:bold;
-    letter-spacing:.5px;
+
+    white-space:nowrap;
 }
 
 .logo small{
     display:block;
 
-    margin-top:3px;
-
     color:#d4af37;
 
     font-family:Arial,sans-serif;
+
     font-size:7px;
+
     letter-spacing:2px;
+
+    margin-top:3px;
 }
+
+
+/* DESKTOP NAV */
 
 nav{
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    gap:17px;
+    gap:16px;
 }
 
 nav a{
     color:#ddd;
 
     font-size:9px;
+
     font-weight:bold;
 
     transition:.3s;
@@ -117,33 +130,67 @@ nav a:hover{
     color:#d4af37;
 }
 
+
+/* MENU BUTTON */
+
+.menu-btn{
+    display:none;
+
+    background:#050505;
+
+    border:1px solid #d4af37;
+
+    color:#d4af37;
+
+    width:38px;
+
+    height:35px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    border-radius:3px;
+}
+
+
+/* HEADER BUTTONS */
+
 .header-actions{
     display:flex;
+
     align-items:center;
+
     gap:7px;
+
+    white-space:nowrap;
 }
 
 .whatsapp{
     background:#159447;
+
     color:white;
 
-    padding:10px 13px;
+    padding:10px 12px;
 
     border-radius:4px;
 
     font-size:8px;
+
     font-weight:bold;
 }
 
 .call{
     border:1px solid #d4af37;
+
     color:#d4af37;
 
-    padding:9px 13px;
+    padding:9px 12px;
 
     border-radius:4px;
 
     font-size:8px;
+
     font-weight:bold;
 }
 
@@ -153,6 +200,7 @@ nav a:hover{
 
 .call:hover{
     background:#d4af37;
+
     color:#000;
 }
 
@@ -187,6 +235,7 @@ nav a:hover{
     inset:0;
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -202,12 +251,12 @@ nav a:hover{
     inset:0;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.88),
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.22)
-        );
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.2)
+    );
 }
 
 .hero-vignette{
@@ -216,12 +265,12 @@ nav a:hover{
     inset:0;
 
     background:
-        linear-gradient(
-            0deg,
-            rgba(0,0,0,.8),
-            transparent 35%,
-            rgba(0,0,0,.35)
-        );
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,.8),
+        transparent 35%,
+        rgba(0,0,0,.3)
+    );
 }
 
 .hero-content{
@@ -230,6 +279,7 @@ nav a:hover{
     z-index:5;
 
     top:50%;
+
     left:7%;
 
     transform:translateY(-50%);
@@ -243,6 +293,7 @@ nav a:hover{
     color:#d4af37;
 
     font-size:10px;
+
     letter-spacing:4px;
 
     font-weight:bold;
@@ -315,9 +366,9 @@ nav a:hover{
 
     padding:12px 19px;
 
-    border:1px solid #a61b1b;
+    border:1px solid #8e1717;
 
-    color:#fff;
+    color:white;
 
     border-radius:3px;
 
@@ -330,6 +381,7 @@ nav a:hover{
     position:absolute;
 
     bottom:25px;
+
     left:7%;
 
     z-index:8;
@@ -349,6 +401,7 @@ nav a:hover{
 
 .scroll-line{
     width:35px;
+
     height:1px;
 
     background:#d4af37;
@@ -365,6 +418,7 @@ section.standard{
 
 .container{
     max-width:1200px;
+
     margin:auto;
 }
 
@@ -443,9 +497,11 @@ section.standard{
     position:absolute;
 
     left:0;
+
     top:0;
 
     width:4px;
+
     height:100%;
 
     background:#d4af37;
@@ -601,17 +657,18 @@ section.standard{
     border-color:#d4af37;
 
     background:
-        linear-gradient(
-            145deg,
-            #151207,
-            #0b0b0b
-        );
+    linear-gradient(
+        145deg,
+        #151207,
+        #0b0b0b
+    );
 }
 
 .popular{
     position:absolute;
 
     top:0;
+
     right:0;
 
     background:#d4af37;
@@ -724,6 +781,7 @@ section.standard{
 
 .team-card img{
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -747,10 +805,10 @@ section.standard{
     padding:25px;
 
     background:
-        linear-gradient(
-            transparent 35%,
-            rgba(0,0,0,.95)
-        );
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.95)
+    );
 }
 
 .team-overlay h3{
@@ -800,6 +858,7 @@ section.standard{
 
 .gallery-item img{
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -813,7 +872,7 @@ section.standard{
 
 
 /* =========================
-   CONTACT / INQUIRY
+   CONTACT
 ========================= */
 
 .contact{
@@ -1059,7 +1118,7 @@ footer{
 
 
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 
 @media(max-width:950px){
@@ -1082,62 +1141,160 @@ footer{
 
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:650px){
 
     .nav{
-        padding:10px 13px;
+        min-height:60px;
+
+        padding:8px 12px;
     }
 
     .logo{
-        font-size:12px;
+        font-size:11px;
     }
 
-    .header-actions .call{
-        display:none;
+    .logo small{
+        font-size:6px;
+    }
+
+    .menu-btn{
+        display:block;
+
+        order:3;
+    }
+
+    .header-actions{
+        margin-left:auto;
     }
 
     .whatsapp{
-        padding:9px 10px;
+        padding:8px 9px;
+
+        font-size:7px;
     }
 
+    .call{
+        display:block;
+
+        padding:7px 9px;
+
+        font-size:7px;
+    }
+
+
+    /* MOBILE MENU */
+
+    nav{
+        position:absolute;
+
+        top:60px;
+
+        left:0;
+
+        width:100%;
+
+        background:rgba(0,0,0,.98);
+
+        display:none;
+
+        flex-direction:column;
+
+        gap:0;
+
+        padding:10px 0;
+
+        border-bottom:1px solid #d4af37;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+
+        padding:13px 20px;
+
+        text-align:center;
+
+        font-size:10px;
+
+        border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+
+    /* MOBILE HERO */
+
     .hero-scroll{
-        height:150vh;
+        height:155vh;
     }
 
     .hero-content{
         left:6%;
 
         right:6%;
+
+        max-width:none;
     }
 
     .hero-title{
-        font-size:42px;
+        font-size:40px;
 
         letter-spacing:-1px;
     }
 
     .hero-subtitle{
-        font-size:25px;
+        font-size:24px;
     }
 
     .hero-description{
         font-size:10px;
+
+        line-height:1.7;
     }
 
-    .services-grid{
-        grid-template-columns:1fr;
+    .hero-cta{
+        flex-wrap:wrap;
+    }
+
+    .hero-video{
+        opacity:.7;
+    }
+
+
+    /* SECTIONS */
+
+    section.standard{
+        padding:60px 5%;
     }
 
     .about-grid{
         grid-template-columns:1fr;
     }
 
+    .about-text{
+        padding-right:0;
+    }
+
     .about-points{
         grid-template-columns:1fr 1fr;
     }
 
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
     .team-grid{
         grid-template-columns:1fr;
+    }
+
+    .team-card{
+        height:300px;
     }
 
     .gallery-grid{
@@ -1145,7 +1302,7 @@ footer{
     }
 
     .gallery-item{
-        height:145px;
+        height:140px;
     }
 
     .form-grid{
@@ -1168,6 +1325,53 @@ footer{
 
 }
 
+
+/* SMALL PHONES */
+
+@media(max-width:390px){
+
+    .logo{
+        font-size:9px;
+    }
+
+    .header-actions{
+        gap:4px;
+    }
+
+    .whatsapp,
+    .call{
+        padding:7px 6px;
+
+        font-size:6px;
+    }
+
+    .menu-btn{
+        width:34px;
+
+        height:32px;
+
+        font-size:18px;
+    }
+
+    .hero-title{
+        font-size:34px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+}
+
 </style>
 
 </head>
@@ -1184,6 +1388,7 @@ footer{
 
 <div class="nav">
 
+
 <a href="#home" class="logo">
 
 PERONNESS
@@ -1193,7 +1398,7 @@ PERONNESS
 </a>
 
 
-<nav>
+<nav id="mobileNav">
 
 <a href="#home">HOME</a>
 
@@ -1231,6 +1436,16 @@ CALL
 
 </div>
 
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu"
+>
+☰
+</button>
+
+
 </div>
 
 </header>
@@ -1238,7 +1453,7 @@ CALL
 
 
 <!-- =========================
-     SCROLL VIDEO HOME
+     HOME
 ========================= -->
 
 <section
@@ -1255,6 +1470,7 @@ id="heroVideo"
 src="hero-video.mp4"
 muted
 playsinline
+webkit-playsinline
 preload="auto"
 ></video>
 
@@ -1311,7 +1527,6 @@ class="gold-btn"
 >
 BOOK YOUR EVENT
 </a>
-
 
 <a
 href="#packages"
@@ -1471,7 +1686,9 @@ WHAT WE DO
 
 
 <h2 class="section-title">
+
 OUR <span>SERVICES</span>
+
 </h2>
 
 
@@ -1488,9 +1705,7 @@ of events.
 
 <div class="service">
 
-<div class="service-number">
-01
-</div>
+<div class="service-number">01</div>
 
 <h3>Event Planning</h3>
 
@@ -1506,9 +1721,7 @@ corporate events and other occasions.
 
 <div class="service">
 
-<div class="service-number">
-02
-</div>
+<div class="service-number">02</div>
 
 <h3>Event Ushers</h3>
 
@@ -1524,9 +1737,7 @@ your guests.
 
 <div class="service">
 
-<div class="service-number">
-03
-</div>
+<div class="service-number">03</div>
 
 <h3>Event Security</h3>
 
@@ -1542,9 +1753,7 @@ safe and organized.
 
 <div class="service">
 
-<div class="service-number">
-04
-</div>
+<div class="service-number">04</div>
 
 <h3>Guest Management</h3>
 
@@ -1559,9 +1768,7 @@ Professional guest reception and movement management.
 
 <div class="service">
 
-<div class="service-number">
-05
-</div>
+<div class="service-number">05</div>
 
 <h3>Crowd Control</h3>
 
@@ -1576,9 +1783,7 @@ Support for entrances, exits and crowded event areas.
 
 <div class="service">
 
-<div class="service-number">
-06
-</div>
+<div class="service-number">06</div>
 
 <h3>VIP Assistance</h3>
 
@@ -1634,18 +1839,13 @@ planning, ushering and security support.
 <div class="package-grid">
 
 
-<!-- BASIC -->
-
 <div class="package">
 
-<h3>
-Basic
-</h3>
+<h3>Basic</h3>
 
 <div class="package-price">
 ₦200,000
 </div>
-
 
 <p class="package-desc">
 
@@ -1653,7 +1853,6 @@ Suitable for smaller events requiring professional
 ushering and basic event support.
 
 </p>
-
 
 <ul>
 
@@ -1683,23 +1882,17 @@ CHOOSE BASIC
 
 
 
-<!-- STANDARD -->
-
 <div class="package featured">
 
 <div class="popular">
 MOST POPULAR
 </div>
 
-
-<h3>
-Standard
-</h3>
+<h3>Standard</h3>
 
 <div class="package-price">
 ₦800,000
 </div>
-
 
 <p class="package-desc">
 
@@ -1707,7 +1900,6 @@ Designed for medium and larger events requiring
 stronger coordination and support.
 
 </p>
-
 
 <ul>
 
@@ -1727,7 +1919,6 @@ stronger coordination and support.
 
 </ul>
 
-
 <a
 href="#contact"
 class="package-btn"
@@ -1739,18 +1930,13 @@ CHOOSE STANDARD
 
 
 
-<!-- PREMIUM -->
-
 <div class="package">
 
-<h3>
-Premium
-</h3>
+<h3>Premium</h3>
 
 <div class="package-price">
 ₦2,000,000
 </div>
-
 
 <p class="package-desc">
 
@@ -1758,7 +1944,6 @@ Complete premium support for major events requiring
 extensive planning and coordination.
 
 </p>
-
 
 <ul>
 
@@ -1777,7 +1962,6 @@ extensive planning and coordination.
 <li>Dedicated Event Assistance</li>
 
 </ul>
-
 
 <a
 href="#contact"
@@ -1842,9 +2026,7 @@ loading="lazy"
 
 <div>
 
-<h3>
-Security Team
-</h3>
+<h3>Security Team</h3>
 
 <p>
 PROTECTION & CROWD MANAGEMENT
@@ -1869,9 +2051,7 @@ loading="lazy"
 
 <div>
 
-<h3>
-Event Team
-</h3>
+<h3>Event Team</h3>
 
 <p>
 USHERS & EVENT SUPPORT
@@ -1927,32 +2107,68 @@ team.
 
 
 <div class="gallery-item">
-<img src="gallery1.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery1.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
 <div class="gallery-item">
-<img src="gallery2.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery2.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
 <div class="gallery-item">
-<img src="gallery3.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery3.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
 <div class="gallery-item">
-<img src="gallery4.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery4.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
 <div class="gallery-item">
-<img src="gallery5.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery5.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
 <div class="gallery-item">
-<img src="gallery6.jpg" alt="Peronness Event" loading="lazy">
+
+<img
+src="gallery6.jpg"
+alt="Peronness Event"
+loading="lazy"
+>
+
 </div>
 
 
@@ -1965,7 +2181,7 @@ team.
 
 
 <!-- =========================
-     CONTACT
+     CONTACT / INQUIRY
 ========================= -->
 
 <section
@@ -1977,8 +2193,6 @@ id="contact"
 
 <div class="contact-grid">
 
-
-<!-- CONTACT INFORMATION -->
 
 <div class="contact-info">
 
@@ -2007,9 +2221,7 @@ our WhatsApp.
 
 <div class="contact-detail">
 
-<small>
-PHONE / WHATSAPP
-</small>
+<small>PHONE / WHATSAPP</small>
 
 <strong>
 +234 806 026 4514
@@ -2020,9 +2232,7 @@ PHONE / WHATSAPP
 
 <div class="contact-detail">
 
-<small>
-AVAILABLE SERVICES
-</small>
+<small>AVAILABLE SERVICES</small>
 
 <strong>
 Planning • Ushers • Security
@@ -2033,9 +2243,7 @@ Planning • Ushers • Security
 
 <div class="contact-detail">
 
-<small>
-PACKAGES
-</small>
+<small>PACKAGES</small>
 
 <strong>
 ₦200K • ₦800K • ₦2M
@@ -2046,8 +2254,6 @@ PACKAGES
 </div>
 
 
-
-<!-- INQUIRY FORM -->
 
 <form
 class="inquiry-form"
@@ -2064,9 +2270,7 @@ Event Inquiry
 
 <div class="form-group">
 
-<label>
-FULL NAME
-</label>
+<label>FULL NAME</label>
 
 <input
 type="text"
@@ -2080,9 +2284,7 @@ required
 
 <div class="form-group">
 
-<label>
-PHONE NUMBER
-</label>
+<label>PHONE NUMBER</label>
 
 <input
 type="tel"
@@ -2096,9 +2298,7 @@ required
 
 <div class="form-group">
 
-<label>
-EVENT DATE
-</label>
+<label>EVENT DATE</label>
 
 <input
 type="date"
@@ -2111,9 +2311,7 @@ required
 
 <div class="form-group">
 
-<label>
-EVENT LOCATION
-</label>
+<label>EVENT LOCATION</label>
 
 <input
 type="text"
@@ -2127,9 +2325,7 @@ required
 
 <div class="form-group form-full">
 
-<label>
-NUMBER OF GUESTS
-</label>
+<label>NUMBER OF GUESTS</label>
 
 <input
 type="number"
@@ -2151,110 +2347,56 @@ EVENT TYPE — SELECT ALL THAT APPLY
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Wedding"
->
-
+<input type="checkbox" value="Wedding">
 Wedding
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Birthday"
->
-
+<input type="checkbox" value="Birthday">
 Birthday
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Corporate Event"
->
-
+<input type="checkbox" value="Corporate Event">
 Corporate
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Graduation"
->
-
+<input type="checkbox" value="Graduation">
 Graduation
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Naming Ceremony"
->
-
+<input type="checkbox" value="Naming Ceremony">
 Naming
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Engagement"
->
-
+<input type="checkbox" value="Engagement">
 Engagement
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Conference"
->
-
+<input type="checkbox" value="Conference">
 Conference
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Dinner"
->
-
+<input type="checkbox" value="Dinner">
 Dinner
-
 </label>
 
 
 <label class="event-option">
-
-<input
-type="checkbox"
-value="Party"
->
-
+<input type="checkbox" value="Party">
 Party
-
 </label>
 
 
@@ -2265,10 +2407,7 @@ Party
 
 <div class="form-group form-full">
 
-<label>
-PACKAGE
-</label>
-
+<label>PACKAGE</label>
 
 <select id="selectedPackage">
 
@@ -2295,9 +2434,7 @@ Premium — ₦2,000,000
 
 <div class="form-group form-full">
 
-<label>
-ADDITIONAL MESSAGE
-</label>
+<label>ADDITIONAL MESSAGE</label>
 
 <textarea
 id="clientMessage"
@@ -2341,6 +2478,7 @@ SEND INQUIRY ON WHATSAPP
 <div class="footer-logo">
 
 PERONNESS
+
 <span>USHERING & GUARD</span>
 
 </div>
@@ -2370,9 +2508,48 @@ href="tel:+2348060264514"
 
 <script>
 
-/* ==========================================
-   SCROLL CONTROLLED HERO VIDEO
-========================================== */
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const mobileNav =
+document.getElementById("mobileNav");
+
+
+menuBtn.addEventListener(
+"click",
+function(){
+
+mobileNav.classList.toggle("active");
+
+}
+);
+
+
+mobileNav
+.querySelectorAll("a")
+.forEach(
+function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+mobileNav.classList.remove("active");
+
+}
+);
+
+}
+);
+
+
+/* =========================
+   SCROLL VIDEO
+========================= */
 
 const heroVideo =
 document.getElementById("heroVideo");
@@ -2384,40 +2561,24 @@ const heroContent =
 document.getElementById("heroContent");
 
 
-let videoReady = false;
+let videoReady=false;
 
+let lastTime=-1;
 
-/* Wait until video knows its duration */
 
 heroVideo.addEventListener(
 "loadedmetadata",
 function(){
 
-videoReady = true;
+videoReady=true;
 
 heroVideo.pause();
+
+updateHeroVideo();
 
 }
 );
 
-
-/* Make sure it never automatically plays */
-
-heroVideo.addEventListener(
-"play",
-function(){
-
-if(videoReady){
-
-heroVideo.pause();
-
-}
-
-}
-);
-
-
-/* Calculate video frame from scrolling */
 
 function updateHeroVideo(){
 
@@ -2430,6 +2591,7 @@ return;
 
 const rect =
 heroSection.getBoundingClientRect();
+
 
 const scrollDistance =
 heroSection.offsetHeight -
@@ -2448,24 +2610,34 @@ Math.min(1,progress)
 );
 
 
-/* Move video through its entire duration */
-
 const targetTime =
 progress *
 heroVideo.duration;
 
 
-/* Only update when necessary */
-
 if(
-Math.abs(
-heroVideo.currentTime -
-targetTime
-) > .015
+Math.abs(lastTime-targetTime)
+>.01
 ){
+
+try{
 
 heroVideo.currentTime =
 targetTime;
+
+lastTime =
+targetTime;
+
+}
+
+catch(error){
+
+console.log(
+"Video seeking unavailable",
+error
+);
+
+}
 
 }
 
@@ -2473,20 +2645,20 @@ targetTime;
 /* Move text together with video */
 
 const move =
-progress * 70;
+progress*70;
 
 
 const opacity =
-1 -
+1-
 Math.max(
 0,
-(progress - .65) / .35
+(progress-.65)/.35
 );
 
 
 heroContent.style.transform =
-"translateY(calc(-50% + " +
-move +
+"translateY(calc(-50% + "+
+move+
 "px))";
 
 
@@ -2503,20 +2675,33 @@ updateHeroVideo,
 );
 
 
-/* Update when page loads */
-
 window.addEventListener(
-"load",
+"resize",
 updateHeroVideo
 );
 
 
-/* ==========================================
-   WHATSAPP INQUIRY FORM
-========================================== */
+window.addEventListener(
+"load",
+function(){
+
+setTimeout(
+updateHeroVideo,
+500
+);
+
+}
+);
+
+
+/* =========================
+   WHATSAPP FORM
+========================= */
 
 const inquiryForm =
-document.getElementById("inquiryForm");
+document.getElementById(
+"inquiryForm"
+);
 
 
 inquiryForm.addEventListener(
@@ -2562,8 +2747,6 @@ document.getElementById(
 ).value;
 
 
-/* Get all selected event types */
-
 const selectedEvents=[];
 
 
@@ -2588,61 +2771,59 @@ document.getElementById(
 ).value;
 
 
-/* Build WhatsApp message */
-
 const whatsappText =
 
-"Hello PERONNESS USHERING AND GUARD,%0A%0A" +
+"Hello PERONNESS USHERING AND GUARD,%0A%0A"+
 
-"I would like to make an event inquiry.%0A%0A" +
+"I would like to make an event inquiry.%0A%0A"+
 
-"Name: " +
-encodeURIComponent(name) +
-"%0A" +
+"Name: "+
+encodeURIComponent(name)+
+"%0A"+
 
-"Phone: " +
-encodeURIComponent(phone) +
-"%0A" +
+"Phone: "+
+encodeURIComponent(phone)+
+"%0A"+
 
-"Event Type: " +
+"Event Type: "+
 encodeURIComponent(
 selectedEvents.join(", ") ||
 "Not selected"
-) +
-"%0A" +
+)+
+"%0A"+
 
-"Package: " +
+"Package: "+
 encodeURIComponent(
 selectedPackage ||
 "Not selected"
-) +
-"%0A" +
+)+
+"%0A"+
 
-"Event Date: " +
-encodeURIComponent(date) +
-"%0A" +
+"Event Date: "+
+encodeURIComponent(date)+
+"%0A"+
 
-"Event Location: " +
-encodeURIComponent(location) +
-"%0A" +
+"Event Location: "+
+encodeURIComponent(location)+
+"%0A"+
 
-"Number of Guests: " +
+"Number of Guests: "+
 encodeURIComponent(
-guests || "Not specified"
-) +
-"%0A%0A" +
+guests ||
+"Not specified"
+)+
+"%0A%0A"+
 
-"Additional Message:%0A" +
+"Additional Message:%0A"+
 
 encodeURIComponent(
-message || "None"
+message ||
+"None"
 );
 
 
-/* Open WhatsApp */
-
 const whatsappURL =
-"https://wa.me/2348060264514?text=" +
+"https://wa.me/2348060264514?text="+
 whatsappText;
 
 
