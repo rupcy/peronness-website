@@ -1,514 +1,87 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PERONNESS USHERING AND GUARD</title>
 
 <style>
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#050505;
-  color:white;
-  font-family:Arial,Helvetica,sans-serif;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* ================= HEADER ================= */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(0,0,0,.92);
-  border-bottom:1px solid rgba(212,175,55,.3);
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:14px 20px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  color:white;
-  font-size:15px;
-  font-weight:bold;
-}
-
-.logo span{
-  display:block;
-  color:#d4af37;
-  font-size:8px;
-  letter-spacing:2px;
-  margin-top:4px;
-}
-
-nav{
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
-
-nav a{
-  color:#ddd;
-  font-size:10px;
-  font-weight:bold;
-}
-
-nav a:hover{
-  color:#d4af37;
-}
-
-.nav-buttons{
-  display:flex;
-  gap:7px;
-}
-
-.whatsapp{
-  background:#159447;
-  color:white;
-  padding:9px 12px;
-  border-radius:4px;
-  font-size:9px;
-  font-weight:bold;
-}
-
-.call{
-  border:1px solid #d4af37;
-  color:#d4af37;
-  padding:8px 12px;
-  border-radius:4px;
-  font-size:9px;
-  font-weight:bold;
-}
-
-
-/* ================= HERO ================= */
-
-.hero{
-  position:relative;
-  height:100vh;
-  min-height:600px;
-  overflow:hidden;
-  background:#000;
-}
-
-.hero video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:.65;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.9),
-      rgba(0,0,0,.45),
-      rgba(0,0,0,.2)
-    );
-}
-
-.hero-content{
-  position:relative;
-  z-index:5;
-
-  max-width:1200px;
-  height:100%;
-  margin:auto;
-
-  padding:100px 30px 50px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.hero-small{
-  color:#d4af37;
-  font-size:10px;
-  letter-spacing:3px;
-  font-weight:bold;
-  margin-bottom:15px;
-}
-
-.hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(40px,7vw,80px);
-  line-height:.95;
-  max-width:850px;
-}
-
-.hero h1 span{
-  color:#d4af37;
-}
-
-.hero-subtitle{
-  color:#d4af37;
-  font-family:Georgia,serif;
-  font-size:32px;
-  margin-top:15px;
-}
-
-.hero-text{
-  max-width:500px;
-  color:#ccc;
-  font-size:12px;
-  line-height:1.7;
-  margin-top:18px;
-}
-
-.hero-buttons{
-  margin-top:22px;
-  display:flex;
-  gap:10px;
-}
-
-.gold-button{
-  background:#d4af37;
-  color:#050505;
-  padding:12px 18px;
-  font-size:10px;
-  font-weight:bold;
-  border-radius:3px;
-}
-
-.outline-button{
-  border:1px solid #d4af37;
-  color:#d4af37;
-  padding:11px 18px;
-  font-size:10px;
-  font-weight:bold;
-  border-radius:3px;
-}
-
-
-/* ================= GENERAL ================= */
-
-section{
-  padding:75px 6%;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-}
-
-.label{
-  color:#d4af37;
-  font-size:9px;
-  letter-spacing:3px;
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-h2{
-  font-family:Georgia,serif;
-  font-size:clamp(34px,5vw,55px);
-  margin-bottom:15px;
-}
-
-h2 span{
-  color:#d4af37;
-}
-
-.description{
-  color:#999;
-  font-size:12px;
-  line-height:1.8;
-  max-width:650px;
-}
-
-
-/* ================= ABOUT ================= */
-
-.about{
-  background:#070707;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-
-.about-box{
-  background:#101010;
-  border:1px solid rgba(212,175,55,.25);
-  padding:30px;
-}
-
-.about-box h3{
-  color:#d4af37;
-  font-family:Georgia,serif;
-  font-size:25px;
-  margin-bottom:12px;
-}
-
-.about-box p{
-  color:#999;
-  font-size:12px;
-  line-height:1.8;
-}
-
-
-/* ================= SERVICES ================= */
-
-.services{
-  background:#090909;
-}
-
-.services-grid{
-  margin-top:30px;
-
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.service{
-  background:#101010;
-  border:1px solid rgba(255,255,255,.08);
-  padding:25px;
-  min-height:190px;
-}
-
-.service-number{
-  color:#d4af37;
-  font-size:9px;
-  margin-bottom:20px;
-}
-
-.service h3{
-  font-family:Georgia,serif;
-  font-size:21px;
-  margin-bottom:10px;
-}
-
-.service p{
-  color:#999;
-  font-size:11px;
-  line-height:1.7;
-}
-
-
-/* ================= PACKAGES ================= */
-
-.packages{
-  background:#050505;
-}
-
-.package-grid{
-  margin-top:30px;
-
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.package{
-  background:#0e0e0e;
-  border:1px solid rgba(212,175,55,.25);
-  padding:28px 22px;
-  min-height:400px;
-
-  display:flex;
-  flex-direction:column;
-}
-
-.package.popular{
-  border:1px solid #d4af37;
-  background:#12100a;
-}
-
-.popular-label{
-  display:inline-block;
-  background:#d4af37;
-  color:#000;
-  padding:6px 9px;
-  font-size:8px;
-  font-weight:bold;
-  align-self:flex-end;
-}
-
-.package h3{
-  color:#d4af37;
-  font-family:Georgia,serif;
-  font-size:28px;
-  margin-top:15px;
-}
-
-.price{
-  font-size:30px;
-  font-weight:bold;
-  margin-top:8px;
-}
-
-.package-description{
-  color:#888;
-  font-size:10px;
-  line-height:1.7;
-  margin:12px 0;
-}
-
-.package ul{
-  list-style:none;
-  margin-top:5px;
-}
-
-.package li{
-  color:#bbb;
-  font-size:10px;
-  padding:7px 0;
-  border-bottom:1px solid rgba(255,255,255,.05);
+body {
+    margin: 0;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-.package li::before{
-  content:"✓";
-  color:#d4af37;
-  margin-right:7px;
-  font-weight:bold;
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.package-button{
-  margin-top:auto;
-  background:#d4af37;
-  color:#000;
-  text-align:center;
-  padding:11px;
-  font-size:9px;
-  font-weight:bold;
+.hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-
-/* ================= TEAM ================= */
-
-.team{
-  background:#080808;
-}
-
-.team-grid{
-  margin-top:30px;
-
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.team-card{
-  height:330px;
-  position:relative;
-  overflow:hidden;
-  background:#111;
-  border:1px solid rgba(212,175,55,.25);
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-.team-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.content {
+    position: relative;
+    z-index: 2;
 }
-
-.team-title{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-
-  padding:35px 20px 18px;
 
-  background:linear-gradient(transparent,rgba(0,0,0,.95));
+h1 {
+    font-size: 50px;
+    margin: 0;
 }
 
-.team-title h3{
-  font-family:Georgia,serif;
-  font-size:23px;
+h2 {
+    color: #d4af37;
+    font-size: 30px;
 }
 
-.team-title p{
-  color:#d4af37;
-  font-size:9px;
-  margin-top:5px;
+p {
+    color: #ddd;
 }
+</style>
+</head>
 
+<body>
 
-/* ================= GALLERY ================= */
+<section class="hero">
 
-.gallery{
-  background:#050505;
-}
-
-.gallery-grid{
-  margin-top:30px;
-
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-}
+<video autoplay muted loop playsinline>
+<source src="hero-video.mp4" type="video/mp4">
+</video>
 
-.gallery-item{
-  height:190px;
-  background:#111;
-  overflow:hidden;
-}
+<div class="overlay"></div>
 
-.gallery-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+<div class="content">
 
+<h1>PERONNESS USHERING AND GUARD</h1>
 
-/* ================= CONTACT ================= */
+<h2>Event Planner</h2>
 
-.contact{
-  background:#080808;
-}
+<p>Professional Event Planning, Ushering & Guard Services</p>
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:25px;
-}
+</div>
 
-.contact-info{
-  border-left:2px solid #d4af37;
-  padding:25px;
-  background:#0c0c0c;
-}
+</section>
 
-.contact-info p{
-  color:#999;
-  font-size:11px;
-  line-height:1.8;
-  margin-top:15px
+</body>
+</html>
+```
