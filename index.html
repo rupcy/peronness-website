@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peronness Ushering & Guard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.75)
+                );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 950px;
+        }
+
+        .small-title {
+            color: #d4af37;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #eeeeee;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .gold-button {
+            background: #d4af37;
+            color: #080808;
+        }
+
+        .gold-button:hover {
+            transform: translateY(-3px);
+            background: #f0d264;
+        }
+
+        .outline-button {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .outline-button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: clamp(35px, 5vw, 60px);
+            margin-top: 12px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #101010;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service {
+            padding: 35px 25px;
+            background: #181818;
+            border: 1px solid #292929;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+        }
+
+        .service h3 {
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #bbb;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #171717, #080808);
+        }
+
+        .cta h2 {
+            font-size: clamp(35px, 5vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 35px;
+            text-align: center;
+            background: #050505;
+            color: #777;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 75px 6%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <!-- BACKGROUND VIDEO -->
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="hero-poster.jpg">
+
+            <source src="hero-video.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Professional Event Services
+            </div>
+
+            <h1>
+                Peronness<br>
+                Ushering & Guard
+            </h1>
+
+            <p class="hero-description">
+                Professional ushers, event support and security services
+                designed to make your special occasion organized,
+                welcoming and memorable.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#contact" class="button gold-button">
+                    BOOK AN EVENT
+                </a>
+
+                <a
+                    href="https://wa.me/2340000000000"
+                    class="button outline-button"
+                    target="_blank">
+                    WHATSAPP US
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section>
+
+        <div class="about">
+
+            <div class="section-title">
+                <span>About Us</span>
+                <h2>Events With Confidence</h2>
+            </div>
+
+            <p>
+                Peronness Ushering & Guard provides professional event
+                staffing and support services for weddings, birthdays,
+                corporate events and special occasions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services">
+
+        <div class="section-title">
+            <span>What We Do</span>
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service">
+                <h3>Event Ushers</h3>
+                <p>
+                    Professional and well-presented ushers
+                    to welcome and assist your guests.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Event Security</h3>
+                <p>
+                    Reliable security support to help keep
+                    your event organized and safe.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Wedding Support</h3>
+                <p>
+                    Dedicated event personnel for weddings
+                    and special celebrations.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Corporate Events</h3>
+                <p>
+                    Professional event support for conferences,
+                    launches and corporate occasions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+
+        <h2>
+            Planning Your Next Event?
+        </h2>
+
+        <p>
+            Let Peronness help you create a professional
+            and well-organized experience.
+        </p>
+
+        <a
+            href="https://wa.me/2340000000000"
+            class="button gold-button"
+            target="_blank">
+            CONTACT US ON WHATSAPP
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Peronness Ushering & Guard.
+        All rights reserved.
+
+    </footer>
+
+</body>
+</html>
