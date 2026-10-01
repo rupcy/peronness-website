@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PERONNESS USHERING & GUARD</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,9 +25,9 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #050505;
     color: white;
+    font-family: "DM Sans", sans-serif;
 }
 
 /* ================= NAVBAR ================= */
@@ -31,11 +37,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    padding: 25px 5%;
+    z-index: 1000;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 25px 6%;
+    justify-content: space-between;
+
     background: linear-gradient(
         rgba(0,0,0,.55),
         transparent
@@ -43,31 +51,72 @@ body {
 }
 
 .logo {
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
-.navbar a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 30px;
-    font-size: 13px;
-    letter-spacing: 1px;
+    margin-left: 28px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
 }
 
-/* ================= HERO SCROLL ================= */
+/* ================= CONTACT BUTTONS ================= */
+
+.contact-buttons {
+    position: fixed;
+    top: 85px;
+    left: 5%;
+    z-index: 1001;
+
+    display: flex;
+    gap: 10px;
+}
+
+.contact-buttons a {
+    text-decoration: none;
+    color: white;
+
+    padding: 11px 17px;
+
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+
+    font-size: 12px;
+    letter-spacing: .5px;
+
+    transition: .3s;
+}
+
+.contact-buttons a:hover {
+    background: white;
+    color: black;
+}
+
+.whatsapp-button {
+    border-color: rgba(255,255,255,.5) !important;
+}
+
+/* ================= HERO ================= */
 
 .video-section {
-    height: 600vh;
+    height: 350vh;
     position: relative;
 }
 
 .video-sticky {
     position: sticky;
     top: 0;
-    height: 100vh;
+
     width: 100%;
+    height: 100vh;
+
     overflow: hidden;
     background: black;
 }
@@ -75,21 +124,23 @@ body {
 .hero-video {
     position: absolute;
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     transform: scale(1.05);
 }
-
-/* dark cinematic overlay */
 
 .hero-overlay {
     position: absolute;
     inset: 0;
+
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.75),
+            rgba(0,0,0,.78),
             rgba(0,0,0,.25),
             rgba(0,0,0,.55)
         );
@@ -99,56 +150,83 @@ body {
 
 .hero-content {
     position: absolute;
+
     left: 8%;
     top: 50%;
+
+    max-width: 850px;
+
     transform: translateY(-50%);
-    max-width: 750px;
+
     z-index: 5;
+
     will-change: transform, opacity;
 }
 
 .hero-small {
-    font-size: 13px;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-    opacity: .8;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 28px;
+    opacity: .75;
 }
 
 .hero-content h1 {
-    font-size: clamp(45px, 7vw, 100px);
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        50px,
+        7vw,
+        105px
+    );
+
     line-height: .95;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .hero-content h1 span {
-    font-weight: 300;
+    font-style: italic;
 }
 
 .hero-description {
-    max-width: 520px;
+    max-width: 500px;
+
     margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: .85;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.82);
 }
 
 .scroll-message {
-    margin-top: 55px;
-    font-size: 11px;
-    letter-spacing: 3px;
-    opacity: .8;
+    margin-top: 50px;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    opacity: .65;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
     min-height: 100vh;
     padding: 120px 7%;
-    background: #080808;
+
+    background: #070707;
 }
 
-.section h2 {
-    font-size: clamp(40px, 6vw, 80px);
+.section-title {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        45px,
+        6vw,
+        85px
+    );
+
+    font-weight: 400;
+
     margin-bottom: 60px;
 }
 
@@ -156,72 +234,209 @@ body {
 
 .services {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
 }
 
 .service-card {
-    min-height: 250px;
     padding: 35px;
-    border: 1px solid #292929;
-    background: #111;
+
+    min-height: 280px;
+
+    border: 1px solid #252525;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0b0b0b
+        );
+
     transition: .4s;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    border-color: white;
+    transform: translateY(-8px);
+    border-color: #666;
+}
+
+.service-number {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 60px;
 }
 
 .service-card h3 {
-    margin-bottom: 20px;
-    font-size: 22px;
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    margin-bottom: 18px;
 }
 
 .service-card p {
-    color: #aaa;
+    color: #999;
     line-height: 1.7;
+    font-size: 14px;
 }
 
 /* ================= GALLERY ================= */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 15px;
 }
 
 .gallery img {
     width: 100%;
     height: 350px;
+
     object-fit: cover;
-    background: #151515;
+
+    background: #111;
+
+    transition: .5s;
 }
 
-/* ================= CONTACT ================= */
+.gallery img:hover {
+    transform: scale(.98);
+}
 
-.contact {
-    min-height: 70vh;
+/* ================= INQUIRY ================= */
+
+.inquiry-section {
+    background: #0a0a0a;
+}
+
+.inquiry-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    max-width: 1200px;
+}
+
+.inquiry-intro h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        45px,
+        6vw,
+        80px
+    );
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.inquiry-intro p {
+    margin-top: 30px;
+
+    max-width: 450px;
+
+    color: #999;
+
+    line-height: 1.8;
+}
+
+/* FORM */
+
+.inquiry-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 18px;
 }
 
-.contact p {
-    max-width: 600px;
-    color: #aaa;
-    line-height: 1.7;
-    margin-bottom: 30px;
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
 }
 
-.whatsapp {
-    display: inline-block;
-    width: fit-content;
-    padding: 18px 30px;
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+
+    width: 100%;
+
+    padding: 17px 18px;
+
+    border: 1px solid #333;
+
+    background: #111;
+
+    color: white;
+
+    outline: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+}
+
+.inquiry-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+    border-color: #888;
+}
+
+.submit-button {
+
+    border: none;
+
+    padding: 18px;
+
     background: white;
+
     color: black;
-    text-decoration: none;
-    font-weight: bold;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.submit-button:hover {
+    background: #ddd;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 50px 7%;
+
+    border-top: 1px solid #222;
+
+    color: #777;
+
+    font-size: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
 }
 
 /* ================= MOBILE ================= */
@@ -232,8 +447,17 @@ body {
         padding: 20px;
     }
 
-    .navbar a {
-        margin-left: 10px;
+    .nav-links {
+        display: none;
+    }
+
+    .contact-buttons {
+        top: 75px;
+        left: 20px;
+    }
+
+    .contact-buttons a {
+        padding: 9px 13px;
         font-size: 10px;
     }
 
@@ -247,7 +471,7 @@ body {
     }
 
     .hero-description {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .services {
@@ -259,38 +483,82 @@ body {
     }
 
     .gallery img {
-        height: 280px;
+        height: 300px;
+    }
+
+    .inquiry-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav class="navbar">
 
     <div class="logo">
-        PERONNESS UG
+        PERONNESS
     </div>
 
-    <div>
+    <div class="nav-links">
+
         <a href="#home">HOME</a>
+
         <a href="#services">SERVICES</a>
+
         <a href="#gallery">GALLERY</a>
-        <a href="#contact">CONTACT</a>
+
+        <a href="#inquiry">INQUIRY</a>
+
     </div>
 
 </nav>
 
 
-<!-- ================= CINEMATIC VIDEO ================= -->
+<!-- ================= WHATSAPP + CALL ================= -->
 
-<section class="video-section" id="home">
+<div class="contact-buttons">
+
+    <a
+        class="whatsapp-button"
+        href="https://wa.me/2348060264514"
+        target="_blank">
+
+        WhatsApp
+
+    </a>
+
+    <a
+        href="tel:+2348060264514">
+
+        Call
+
+    </a>
+
+</div>
+
+
+<!-- ================= CINEMATIC HERO ================= -->
+
+<section
+    class="video-section"
+    id="home">
 
     <div class="video-sticky">
 
@@ -311,25 +579,36 @@ body {
         <div class="hero-overlay"></div>
 
 
-        <div class="hero-content" id="heroContent">
+        <div
+            class="hero-content"
+            id="heroContent">
 
             <div class="hero-small">
                 PERONNESS USHERING & GUARD
             </div>
 
             <h1>
-                We Make Every
+
+                Every Event
+
                 <br>
-                <span>Event Unforgettable.</span>
+
+                <span>Deserves Excellence.</span>
+
             </h1>
 
             <p class="hero-description">
-                Professional event support, ushering and guest
-                management for memorable occasions.
+
+                Professional ushering, guest management
+                and event support designed to make every
+                occasion seamless and memorable.
+
             </p>
 
             <div class="scroll-message">
+
                 SCROLL TO EXPLORE ↓
+
             </div>
 
         </div>
@@ -341,43 +620,92 @@ body {
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section" id="services">
+<section
+    class="section"
+    id="services">
 
-    <h2>Our Services</h2>
+    <h2 class="section-title">
+        What We Do
+    </h2>
+
 
     <div class="services">
 
-        <div class="service-card">
-            <h3>Event Ushering</h3>
-            <p>
-                Professional ushers to welcome and assist
-                your guests throughout your event.
-            </p>
-        </div>
 
         <div class="service-card">
-            <h3>Guest Management</h3>
+
+            <div class="service-number">
+                01
+            </div>
+
+            <h3>
+                Event Ushering
+            </h3>
+
             <p>
-                Organized guest assistance and smooth
-                movement during events.
+                Professional ushers who welcome,
+                guide and assist guests throughout
+                your event.
             </p>
+
         </div>
 
-        <div class="service-card">
-            <h3>Event Support</h3>
-            <p>
-                Reliable support to help your event
-                run smoothly from start to finish.
-            </p>
-        </div>
 
         <div class="service-card">
-            <h3>Guard Services</h3>
+
+            <div class="service-number">
+                02
+            </div>
+
+            <h3>
+                Guest Management
+            </h3>
+
+            <p>
+                Organized guest assistance that
+                helps your event flow smoothly
+                from arrival to departure.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h3>
+                Event Support
+            </h3>
+
+            <p>
+                Reliable event support designed
+                to help you focus on enjoying
+                your special occasion.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <h3>
+                Guard Services
+            </h3>
+
             <p>
                 Professional event security and
-                guest protection services.
+                guest protection support.
             </p>
+
         </div>
+
 
     </div>
 
@@ -386,54 +714,194 @@ body {
 
 <!-- ================= GALLERY ================= -->
 
-<section class="section" id="gallery">
+<section
+    class="section"
+    id="gallery">
 
-    <h2>Our Events</h2>
+    <h2 class="section-title">
+        Moments We've Created
+    </h2>
+
 
     <div class="gallery">
 
-        <img src="./gallery1.jpg" alt="Peronness event">
-        <img src="./gallery2.jpg" alt="Peronness event">
-        <img src="./gallery3.jpg" alt="Peronness event">
-        <img src="./gallery4.jpg" alt="Peronness event">
-        <img src="./gallery5.jpg" alt="Peronness event">
-        <img src="./gallery6.jpg" alt="Peronness event">
+        <img
+            src="./gallery1.jpg"
+            alt="Peronness event">
+
+        <img
+            src="./gallery2.jpg"
+            alt="Peronness event">
+
+        <img
+            src="./gallery3.jpg"
+            alt="Peronness event">
+
+        <img
+            src="./gallery4.jpg"
+            alt="Peronness event">
+
+        <img
+            src="./gallery5.jpg"
+            alt="Peronness event">
+
+        <img
+            src="./gallery6.jpg"
+            alt="Peronness event">
 
     </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ================= INQUIRY FORM ================= -->
 
-<section class="section contact" id="contact">
+<section
+    class="section inquiry-section"
+    id="inquiry">
 
-    <h2>Let's Create Something Special.</h2>
 
-    <p>
-        Planning an event? Contact PERONNESS USHERING & GUARD
-        for professional event support and ushering services.
-    </p>
+    <div class="inquiry-wrapper">
 
-    <a
-        class="whatsapp"
-        href="https://wa.me/2340000000000"
-        target="_blank">
 
-        CONTACT US ON WHATSAPP
+        <div class="inquiry-intro">
 
-    </a>
+            <h2>
+                Let's Plan
+                <br>
+                Your Event.
+            </h2>
+
+            <p>
+                Tell us a little about your event
+                and our team can get back to you
+                with the right support for your occasion.
+            </p>
+
+        </div>
+
+
+        <form
+            class="inquiry-form"
+            id="inquiryForm">
+
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <select
+                    id="eventType"
+                    required>
+
+                    <option value="">
+                        Event Type
+                    </option>
+
+                    <option>
+                        Wedding
+                    </option>
+
+                    <option>
+                        Birthday
+                    </option>
+
+                    <option>
+                        Corporate Event
+                    </option>
+
+                    <option>
+                        Party
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="date"
+                    id="eventDate"
+                    required>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Event Location"
+                required>
+
+
+            <input
+                type="number"
+                id="guests"
+                placeholder="Estimated Number of Guests">
+
+
+            <textarea
+                id="message"
+                placeholder="Tell us about your event..."></textarea>
+
+
+            <button
+                type="submit"
+                class="submit-button">
+
+                SEND INQUIRY VIA WHATSAPP
+
+            </button>
+
+
+        </form>
+
+    </div>
 
 </section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div>
+        © 2026 PERONNESS USHERING & GUARD
+    </div>
+
+    <div>
+        +234 806 026 4514
+    </div>
+
+</footer>
 
 
 <!-- ================= SCROLL VIDEO SCRIPT ================= -->
 
 <script>
 
-const video = document.getElementById("heroVideo");
+const video =
+    document.getElementById("heroVideo");
 
-const section = document.querySelector(".video-section");
+const section =
+    document.querySelector(".video-section");
 
 const heroContent =
     document.getElementById("heroContent");
@@ -442,8 +910,6 @@ let targetProgress = 0;
 
 let currentProgress = 0;
 
-
-/* Find how far the visitor has scrolled */
 
 function calculateScroll() {
 
@@ -460,17 +926,20 @@ function calculateScroll() {
     targetProgress =
         Math.max(
             0,
-            Math.min(1, targetProgress)
+            Math.min(
+                1,
+                targetProgress
+            )
         );
+
 }
 
-
-/* Animate video and text */
 
 function animate() {
 
     currentProgress +=
-        (targetProgress - currentProgress) * 0.15;
+        (targetProgress - currentProgress)
+        * 0.18;
 
 
     /* VIDEO */
@@ -487,22 +956,25 @@ function animate() {
     /* TEXT MOVEMENT */
 
     const moveUp =
-        currentProgress * -250;
+        currentProgress * -260;
 
 
     const scale =
         1 -
-        currentProgress * 0.25;
+        currentProgress * .22;
 
 
     let opacity = 1;
 
 
-    if (currentProgress > 0.45) {
+    if (currentProgress > .40) {
 
         opacity =
             1 -
-            ((currentProgress - 0.45) / 0.35);
+            (
+                (currentProgress - .40)
+                / .32
+            );
 
     }
 
@@ -513,15 +985,16 @@ function animate() {
 
 
     heroContent.style.opacity =
-        Math.max(0, opacity);
+        Math.max(
+            0,
+            opacity
+        );
 
 
     requestAnimationFrame(animate);
 
 }
 
-
-/* Watch scrolling */
 
 window.addEventListener(
     "scroll",
@@ -545,6 +1018,80 @@ video.addEventListener(
 calculateScroll();
 
 animate();
+
+
+/* ================= INQUIRY FORM ================= */
+
+const form =
+    document.getElementById("inquiryForm");
+
+
+form.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("name").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const eventType =
+            document.getElementById("eventType").value;
+
+        const eventDate =
+            document.getElementById("eventDate").value;
+
+        const location =
+            document.getElementById("location").value;
+
+        const guests =
+            document.getElementById("guests").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const whatsappMessage =
+
+`Hello PERONNESS USHERING & GUARD.
+
+I would like to make an event inquiry.
+
+Name: ${name}
+
+Phone: ${phone}
+
+Event Type: ${eventType}
+
+Event Date: ${eventDate}
+
+Event Location: ${location}
+
+Estimated Guests: ${guests}
+
+Message:
+${message}`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348060264514?text="
+            +
+            encodeURIComponent(
+                whatsappMessage
+            );
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+);
 
 </script>
 
