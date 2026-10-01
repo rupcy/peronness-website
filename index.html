@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Peronness Ushering & Guard</title>
+<title>PERONNESS USHERING & GUARD</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -14,35 +15,30 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background: #050505;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* ================= NAVBAR ================= */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 20px 6%;
-
+    padding: 25px 6%;
     background: linear-gradient(
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0)
+        rgba(0,0,0,.55),
+        transparent
     );
 }
 
@@ -52,466 +48,249 @@ body {
     letter-spacing: 2px;
 }
 
-.logo span {
-    color: #d4af37;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-links a {
+.navbar a {
     color: white;
     text-decoration: none;
+    margin-left: 30px;
     font-size: 13px;
     letter-spacing: 1px;
-    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #d4af37;
-}
-
-/* =========================
-   SCROLL VIDEO HERO
-========================= */
+/* ================= HERO SCROLL ================= */
 
 .video-section {
-    height: 500vh;
+    height: 600vh;
     position: relative;
 }
 
 .video-sticky {
     position: sticky;
     top: 0;
-
-    width: 100%;
     height: 100vh;
-
+    width: 100%;
     overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: black;
 }
 
 .hero-video {
     position: absolute;
-
+    inset: 0;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    z-index: 0;
+    transform: scale(1.05);
 }
 
-.video-overlay {
+/* dark cinematic overlay */
+
+.hero-overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
-            rgba(0,0,0,0.35),
-            rgba(0,0,0,0.75)
+            90deg,
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.55)
         );
-
-    z-index: 1;
 }
 
+/* ================= HERO TEXT ================= */
+
 .hero-content {
-    position: relative;
-    z-index: 2;
-
-    text-align: center;
-
-    width: 90%;
-    max-width: 1000px;
-
-    transition: opacity 0.3s ease;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 750px;
+    z-index: 5;
+    will-change: transform, opacity;
 }
 
 .hero-small {
-    color: #d4af37;
-
     font-size: 13px;
-
     letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    opacity: .8;
 }
 
-.hero-title {
-    font-size: clamp(45px, 8vw, 95px);
+.hero-content h1 {
+    font-size: clamp(45px, 7vw, 100px);
+    line-height: .95;
+    font-weight: 700;
+}
 
-    line-height: 0.95;
-
-    text-transform: uppercase;
-
-    margin-bottom: 25px;
+.hero-content h1 span {
+    font-weight: 300;
 }
 
 .hero-description {
-    max-width: 650px;
-
-    margin: auto;
-
-    color: #eee;
-
+    max-width: 520px;
+    margin-top: 30px;
     font-size: 18px;
-
-    line-height: 1.7;
+    line-height: 1.6;
+    opacity: .85;
 }
 
-.scroll-text {
-    position: absolute;
-
-    bottom: 35px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 3;
-
-    color: white;
-
+.scroll-message {
+    margin-top: 55px;
     font-size: 11px;
-
     letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    animation: scrollPulse 1.8s infinite;
+    opacity: .8;
 }
 
-@keyframes scrollPulse {
+/* ================= SECTIONS ================= */
 
-    0%,100% {
-        opacity: 0.4;
-        transform: translate(-50%,0);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate(-50%,8px);
-    }
-
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section.content-section {
-
-    padding: 110px 8%;
-
+.section {
+    min-height: 100vh;
+    padding: 120px 7%;
     background: #080808;
 }
 
-.section-heading {
-
-    text-align: center;
-
+.section h2 {
+    font-size: clamp(40px, 6vw, 80px);
     margin-bottom: 60px;
 }
 
-.section-heading span {
-
-    color: #d4af37;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-}
-
-.section-heading h2 {
-
-    font-size: clamp(35px,5vw,65px);
-
-    margin-top: 15px;
-}
-
-/* =========================
-   SERVICES
-========================= */
+/* ================= SERVICES ================= */
 
 .services {
-
     display: grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-
-    max-width: 1200px;
-
-    margin: auto;
 }
 
-.service {
-
-    padding: 35px 25px;
-
-    background: #121212;
-
-    border: 1px solid #242424;
-
-    transition: 0.4s;
+.service-card {
+    min-height: 250px;
+    padding: 35px;
+    border: 1px solid #292929;
+    background: #111;
+    transition: .4s;
 }
 
-.service:hover {
-
+.service-card:hover {
     transform: translateY(-10px);
-
-    border-color: #d4af37;
+    border-color: white;
 }
 
-.service h3 {
-
-    margin-bottom: 15px;
+.service-card h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
-.service p {
-
-    color: #999;
-
+.service-card p {
+    color: #aaa;
     line-height: 1.7;
 }
 
-/* =========================
-   GALLERY
-========================= */
+/* ================= GALLERY ================= */
 
 .gallery {
-
     display: grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-
-    max-width: 1200px;
-
-    margin: auto;
 }
 
-.gallery-item {
-
-    height: 320px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background: #111;
-}
-
-.gallery-item img {
-
+.gallery img {
     width: 100%;
-
-    height: 100%;
-
+    height: 350px;
     object-fit: cover;
-
-    transition: transform 0.7s ease;
+    background: #151515;
 }
 
-.gallery-item:hover img {
-
-    transform: scale(1.08);
-}
-
-/* =========================
-   CONTACT
-========================= */
+/* ================= CONTACT ================= */
 
 .contact {
-
-    text-align: center;
-
-    padding: 130px 8%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #151515,
-        #050505
-    );
-}
-
-.contact h2 {
-
-    font-size:
-    clamp(35px,6vw,70px);
-
-    margin-bottom: 20px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact p {
-
+    max-width: 600px;
     color: #aaa;
-
-    margin-bottom: 35px;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.button {
-
+.whatsapp {
     display: inline-block;
-
-    padding: 16px 30px;
-
+    width: fit-content;
+    padding: 18px 30px;
+    background: white;
+    color: black;
     text-decoration: none;
-
     font-weight: bold;
-
-    border-radius: 3px;
-
-    transition: 0.3s;
 }
 
-.gold-button {
+/* ================= MOBILE ================= */
 
-    background: #d4af37;
+@media(max-width: 800px) {
 
-    color: #050505;
-}
-
-.gold-button:hover {
-
-    background: #f0d264;
-
-    transform: translateY(-3px);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    text-align: center;
-
-    padding: 35px;
-
-    background: #030303;
-
-    color: #666;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px) {
-
-    .services {
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+    .navbar {
+        padding: 20px;
     }
 
-    .gallery {
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+    .navbar a {
+        margin-left: 10px;
+        font-size: 10px;
     }
 
-}
-
-@media(max-width:600px) {
-
-    .nav-links {
-
-        gap: 12px;
+    .hero-content {
+        left: 7%;
+        right: 7%;
     }
 
-    .nav-links a {
-
-        font-size: 9px;
-    }
-
-    .logo {
-
-        font-size: 12px;
-    }
-
-    .services {
-
-        grid-template-columns:1fr;
-    }
-
-    .gallery {
-
-        grid-template-columns:1fr;
-    }
-
-    .gallery-item {
-
-        height: 300px;
+    .hero-content h1 {
+        font-size: 50px;
     }
 
     .hero-description {
-
-        font-size: 15px;
+        font-size: 16px;
     }
 
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 280px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
     <div class="logo">
-        PERONNESS <span>UG</span>
+        PERONNESS UG
     </div>
 
-    <ul class="nav-links">
-
-        <li>
-            <a href="#home">HOME</a>
-        </li>
-
-        <li>
-            <a href="#services">SERVICES</a>
-        </li>
-
-        <li>
-            <a href="#gallery">GALLERY</a>
-        </li>
-
-        <li>
-            <a href="#contact">CONTACT</a>
-        </li>
-
-    </ul>
+    <div>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#contact">CONTACT</a>
+    </div>
 
 </nav>
 
 
-<!-- =========================
-     SCROLL CONTROLLED VIDEO
-========================= -->
+<!-- ================= CINEMATIC VIDEO ================= -->
 
-<div class="video-section" id="home">
+<section class="video-section" id="home">
 
     <div class="video-sticky">
 
@@ -528,100 +307,76 @@ footer {
 
         </video>
 
-        <div class="video-overlay"></div>
+
+        <div class="hero-overlay"></div>
+
 
         <div class="hero-content" id="heroContent">
 
             <div class="hero-small">
-                Professional Event Services
+                PERONNESS USHERING & GUARD
             </div>
 
-            <h1 class="hero-title">
-                Peronness<br>
-                Ushering & Guard
+            <h1>
+                We Make Every
+                <br>
+                <span>Event Unforgettable.</span>
             </h1>
 
             <p class="hero-description">
-                Professional event staffing,
-                ushering and security services
-                for unforgettable occasions.
+                Professional event support, ushering and guest
+                management for memorable occasions.
             </p>
 
-        </div>
+            <div class="scroll-message">
+                SCROLL TO EXPLORE ↓
+            </div>
 
-        <div class="scroll-text">
-            ↓ Scroll to explore
         </div>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- ================= SERVICES ================= -->
 
-<section
-    class="content-section"
-    id="services">
+<section class="section" id="services">
 
-    <div class="section-heading">
-
-        <span>What We Do</span>
-
-        <h2>Our Services</h2>
-
-    </div>
+    <h2>Our Services</h2>
 
     <div class="services">
 
-        <div class="service">
-
-            <h3>Event Ushers</h3>
-
+        <div class="service-card">
+            <h3>Event Ushering</h3>
             <p>
-                Professional ushers who
-                welcome and assist guests
-                throughout your event.
+                Professional ushers to welcome and assist
+                your guests throughout your event.
             </p>
-
         </div>
 
-        <div class="service">
-
-            <h3>Event Security</h3>
-
+        <div class="service-card">
+            <h3>Guest Management</h3>
             <p>
-                Reliable security support
-                to help keep your event
-                safe and organized.
+                Organized guest assistance and smooth
+                movement during events.
             </p>
-
         </div>
 
-        <div class="service">
-
-            <h3>Wedding Events</h3>
-
+        <div class="service-card">
+            <h3>Event Support</h3>
             <p>
-                Professional event support
-                for weddings and special
-                celebrations.
+                Reliable support to help your event
+                run smoothly from start to finish.
             </p>
-
         </div>
 
-        <div class="service">
-
-            <h3>Corporate Events</h3>
-
+        <div class="service-card">
+            <h3>Guard Services</h3>
             <p>
-                Event staffing and support
-                for corporate occasions,
-                conferences and launches.
+                Professional event security and
+                guest protection services.
             </p>
-
         </div>
 
     </div>
@@ -629,190 +384,170 @@ footer {
 </section>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- ================= GALLERY ================= -->
 
-<section
-    class="content-section"
-    id="gallery">
+<section class="section" id="gallery">
 
-    <div class="section-heading">
-
-        <span>Our Work</span>
-
-        <h2>Event Gallery</h2>
-
-    </div>
+    <h2>Our Events</h2>
 
     <div class="gallery">
 
-        <div class="gallery-item">
-
-            <img
-                src="gallery1.jpg"
-                alt="Peronness event">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="gallery2.jpg"
-                alt="Peronness event">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="gallery3.jpg"
-                alt="Peronness event">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="gallery4.jpg"
-                alt="Peronness event">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="gallery5.jpg"
-                alt="Peronness event">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="gallery6.jpg"
-                alt="Peronness event">
-
-        </div>
+        <img src="./gallery1.jpg" alt="Peronness event">
+        <img src="./gallery2.jpg" alt="Peronness event">
+        <img src="./gallery3.jpg" alt="Peronness event">
+        <img src="./gallery4.jpg" alt="Peronness event">
+        <img src="./gallery5.jpg" alt="Peronness event">
+        <img src="./gallery6.jpg" alt="Peronness event">
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ================= CONTACT ================= -->
 
-<section
-    class="contact"
-    id="contact">
+<section class="section contact" id="contact">
 
-    <h2>
-        Plan Your Next Event
-    </h2>
+    <h2>Let's Create Something Special.</h2>
 
     <p>
-        Let Peronness help make
-        your event professional,
-        organized and memorable.
+        Planning an event? Contact PERONNESS USHERING & GUARD
+        for professional event support and ushering services.
     </p>
 
     <a
+        class="whatsapp"
         href="https://wa.me/2340000000000"
-        target="_blank"
-        class="button gold-button">
+        target="_blank">
 
-        WhatsApp Us
+        CONTACT US ON WHATSAPP
 
     </a>
 
 </section>
 
 
-<footer>
-
-    © 2026 Peronness Ushering & Guard
-
-</footer>
-
-
-<!-- =========================
-     SCROLL VIDEO JAVASCRIPT
-========================= -->
+<!-- ================= SCROLL VIDEO SCRIPT ================= -->
 
 <script>
 
-const video =
-document.getElementById("heroVideo");
+const video = document.getElementById("heroVideo");
 
-const section =
-document.querySelector(".video-section");
+const section = document.querySelector(".video-section");
 
 const heroContent =
-document.getElementById("heroContent");
+    document.getElementById("heroContent");
+
+let targetProgress = 0;
+
+let currentProgress = 0;
 
 
-function updateVideo() {
+/* Find how far the visitor has scrolled */
+
+function calculateScroll() {
 
     const rect =
-    section.getBoundingClientRect();
-
-    const sectionHeight =
-    section.offsetHeight;
-
-    const viewportHeight =
-    window.innerHeight;
+        section.getBoundingClientRect();
 
     const scrollDistance =
-    sectionHeight - viewportHeight;
+        section.offsetHeight -
+        window.innerHeight;
 
-    let progress =
-    -rect.top / scrollDistance;
+    targetProgress =
+        -rect.top / scrollDistance;
 
-    progress =
-    Math.max(
-        0,
-        Math.min(1, progress)
-    );
+    targetProgress =
+        Math.max(
+            0,
+            Math.min(1, targetProgress)
+        );
+}
+
+
+/* Animate video and text */
+
+function animate() {
+
+    currentProgress +=
+        (targetProgress - currentProgress) * 0.15;
+
+
+    /* VIDEO */
 
     if (video.duration) {
 
         video.currentTime =
-        progress * video.duration;
+            currentProgress *
+            video.duration;
 
     }
 
-    /*
-       Fade the text as the visitor
-       moves deeper into the video.
-    */
 
-    if (progress > 0.65) {
+    /* TEXT MOVEMENT */
 
-        heroContent.style.opacity =
-        1 - ((progress - 0.65) / 0.35);
+    const moveUp =
+        currentProgress * -250;
 
-    } else {
 
-        heroContent.style.opacity = 1;
+    const scale =
+        1 -
+        currentProgress * 0.25;
+
+
+    let opacity = 1;
+
+
+    if (currentProgress > 0.45) {
+
+        opacity =
+            1 -
+            ((currentProgress - 0.45) / 0.35);
 
     }
+
+
+    heroContent.style.transform =
+        `translateY(calc(-50% + ${moveUp}px))
+         scale(${scale})`;
+
+
+    heroContent.style.opacity =
+        Math.max(0, opacity);
+
+
+    requestAnimationFrame(animate);
 
 }
 
 
+/* Watch scrolling */
+
 window.addEventListener(
     "scroll",
-    updateVideo
+    calculateScroll,
+    { passive: true }
 );
+
+
+window.addEventListener(
+    "resize",
+    calculateScroll
+);
+
 
 video.addEventListener(
     "loadedmetadata",
-    updateVideo
+    calculateScroll
 );
 
+
+calculateScroll();
+
+animate();
+
 </script>
+
 
 </body>
 </html>
