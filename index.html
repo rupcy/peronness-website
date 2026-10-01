@@ -10,9 +10,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
 
 * {
     margin: 0;
@@ -21,114 +25,169 @@
 }
 
 html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #050505;
-    color: white;
+    background: #f8f6f0;
+    color: #171717;
     font-family: "Inter", sans-serif;
 }
 
-/* ================= NAVIGATION ================= */
+:root {
+    --gold: #b89445;
+    --dark-gold: #8d6d2f;
+    --cream: #f8f6f0;
+    --white: #ffffff;
+    --black: #171717;
+    --light-gold: #d7c28b;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
 
-    padding: 25px 5%;
+    padding: 24px 5%;
 
     z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    color: white;
 }
 
 .logo {
-    font-size: 14px;
-    font-weight: 600;
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
     letter-spacing: 3px;
+
+    font-weight: 500;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 30px;
 }
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
 
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    font-size: 10px;
 
-    opacity: .8;
+    letter-spacing: 2px;
 
     transition: .3s;
 }
 
 .nav-links a:hover {
-    opacity: 1;
+    color: var(--light-gold);
 }
 
 
-/* ================= WHATSAPP / CALL ================= */
+/* =========================
+   CONTACT BUTTONS
+========================= */
 
 .contact-buttons {
     position: fixed;
 
-    top: 25px;
+    top: 22px;
     left: 5%;
 
     z-index: 2000;
 
     display: flex;
+
     gap: 8px;
 }
 
 .contact-buttons a {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
     text-decoration: none;
 
-    color: white;
+    display: flex;
 
-    padding: 10px 15px;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 11px 17px;
 
     border-radius: 30px;
 
-    border: 1px solid rgba(255,255,255,.35);
-
-    background: rgba(0,0,0,.45);
-
-    backdrop-filter: blur(12px);
-
     font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
 
     transition: .3s;
 }
 
-.contact-buttons a:hover {
-    background: white;
-    color: black;
+
+/* WHATSAPP */
+
+.whatsapp-button {
+    background: #25D366;
+
+    color: white;
+
+    box-shadow:
+        0 8px 25px rgba(37,211,102,.25);
+}
+
+.whatsapp-button:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-2px);
 }
 
 
-/* ================= HERO ================= */
+/* CALL */
 
-/*
-   SHORTER SCROLL
-*/
+.call-button {
+    background: rgba(255,255,255,.95);
+
+    color: #8d6d2f;
+
+    border: 1px solid #d4b96c;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+}
+
+.call-button:hover {
+    background: #b89445;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .video-section {
     height: 180vh;
 
     position: relative;
+
+    background: #000;
 }
 
 .video-sticky {
@@ -137,11 +196,12 @@ body {
     top: 0;
 
     width: 100%;
+
     height: 100vh;
 
     overflow: hidden;
 
-    background: black;
+    background: #000;
 }
 
 .hero-video {
@@ -150,11 +210,12 @@ body {
     inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 .hero-overlay {
@@ -164,225 +225,305 @@ body {
 
     background:
         linear-gradient(
-            90deg,
-            rgba(0,0,0,.68),
             rgba(0,0,0,.20),
-            rgba(0,0,0,.50)
+            rgba(0,0,0,.42)
         );
 }
 
 
-/* ================= NEW HERO TEXT ================= */
+/* =========================
+   CENTER HERO CONTENT
+========================= */
 
 .hero-content {
-
     position: absolute;
 
-    left: 7%;
+    left: 50%;
+    top: 50%;
 
-    bottom: 13%;
+    transform:
+        translate(-50%, -50%);
 
-    z-index: 5;
+    width: 90%;
 
-    max-width: 800px;
+    max-width: 1100px;
 
-    will-change: transform, opacity;
+    text-align: center;
+
+    z-index: 10;
+
+    will-change:
+        transform,
+        opacity;
 }
 
 .hero-label {
-
     font-size: 11px;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 
     text-transform: uppercase;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
-    opacity: .7;
+    color: white;
+
+    opacity: .85;
 }
 
 .hero-content h1 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(
-        55px,
-        8vw,
-        115px
-    );
+    font-family:
+        "Playfair Display",
+        serif;
 
     font-weight: 400;
 
+    font-size:
+        clamp(
+            55px,
+            9vw,
+            125px
+        );
+
     line-height: .9;
 
-    letter-spacing: -3px;
+    letter-spacing: -4px;
+
+    color: white;
 }
 
 .hero-content h1 span {
+    color: #e2c77d;
 
     font-style: italic;
-
-    opacity: .8;
 }
 
 .hero-line {
-
     width: 80px;
 
     height: 1px;
 
-    background: white;
+    background: #d8bd72;
 
-    margin-top: 30px;
-
-    opacity: .6;
+    margin: 30px auto 20px;
 }
 
 .hero-bottom {
+    color: white;
 
-    margin-top: 20px;
+    font-size: 10px;
 
-    font-size: 12px;
+    letter-spacing: 4px;
 
-    letter-spacing: 2px;
-
-    opacity: .65;
+    opacity: .8;
 }
 
 
-/* ================= SECTIONS ================= */
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: .7;
+
+    z-index: 20;
+}
+
+.scroll-line {
+    width: 1px;
+
+    height: 40px;
+
+    background: #d8bd72;
+
+    margin: 10px auto 0;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
-
     min-height: 100vh;
 
     padding: 110px 7%;
 
-    background: #080808;
+    background: var(--cream);
 }
 
 .section-title {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(
-        45px,
-        6vw,
-        85px
-    );
+    font-family:
+        "Playfair Display",
+        serif;
 
     font-weight: 400;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            85px
+        );
+
+    line-height: 1;
+
+    color: var(--black);
 
     margin-bottom: 60px;
 }
 
+.gold-text {
+    color: var(--gold);
+}
 
-/* ================= SERVICES ================= */
+
+/* =========================
+   SERVICES
+========================= */
 
 .services {
-
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 18px;
 }
 
 .service-card {
+    min-height: 290px;
 
-    min-height: 260px;
+    padding: 32px;
 
-    padding: 30px;
+    background: white;
 
-    border: 1px solid #242424;
+    border: 1px solid #e4dcc9;
 
-    background: #0d0d0d;
+    position: relative;
 
     transition: .4s;
 }
 
-.service-card:hover {
+.service-card::before {
+    content: "";
 
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: .4s;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
     transform: translateY(-8px);
 
-    border-color: #555;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.08);
 }
 
 .service-number {
-
-    color: #666;
+    color: var(--gold);
 
     font-size: 11px;
 
-    margin-bottom: 50px;
+    letter-spacing: 2px;
+
+    margin-bottom: 65px;
 }
 
 .service-card h3 {
-
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 27px;
+    font-size: 28px;
 
     font-weight: 400;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .service-card p {
+    color: #777;
 
-    color: #999;
+    font-size: 13px;
 
-    font-size: 14px;
-
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
-/* ================= GALLERY ================= */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery {
-
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 12px;
+    gap: 15px;
 }
 
 .gallery img {
-
     width: 100%;
 
     height: 350px;
 
     object-fit: cover;
 
-    background: #111;
+    background: #e9e4d8;
 
     transition: .5s;
 }
 
 .gallery img:hover {
-
     transform: scale(.98);
 }
 
 
-/* ================= INQUIRY ================= */
+/* =========================
+   INQUIRY SECTION
+========================= */
 
 .inquiry {
-
-    background: #0a0a0a;
+    background: white;
 }
 
 .inquiry-wrapper {
+    max-width: 1200px;
 
-    max-width: 1100px;
+    margin: auto;
 
     display: grid;
 
@@ -393,27 +534,32 @@ body {
 }
 
 .inquiry-title {
-
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: clamp(
-        50px,
-        6vw,
-        85px
-    );
-
-    font-weight: 400;
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            90px
+        );
 
     line-height: .95;
+
+    font-weight: 400;
+}
+
+.inquiry-title span {
+    color: var(--gold);
+
+    font-style: italic;
 }
 
 .inquiry-text {
-
     margin-top: 30px;
 
-    color: #888;
+    color: #777;
 
     line-height: 1.8;
 
@@ -421,171 +567,262 @@ body {
 }
 
 
-/* ================= FORM ================= */
+/* =========================
+   FORM
+========================= */
 
 .inquiry-form {
-
     display: flex;
 
     flex-direction: column;
 
-    gap: 15px;
+    gap: 16px;
 }
 
 .form-row {
-
     display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap: 15px;
+    gap: 16px;
 }
 
 .inquiry-form input,
-.inquiry-form select,
 .inquiry-form textarea {
-
     width: 100%;
 
     padding: 17px;
 
-    background: #111;
+    background: #faf9f5;
 
-    border: 1px solid #303030;
+    border: 1px solid #ded6c3;
 
-    color: white;
+    color: #222;
 
-    font-family: "Inter", sans-serif;
-
-    font-size: 14px;
+    font-family:
+        "Inter",
+        sans-serif;
 
     outline: none;
+
+    font-size: 13px;
 }
 
-.inquiry-form textarea {
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+    border-color: var(--gold);
+}
 
-    min-height: 140px;
+
+/* =========================
+   EVENT CHECKBOXES
+========================= */
+
+.event-box {
+    padding: 20px;
+
+    background: #faf9f5;
+
+    border: 1px solid #ded6c3;
+}
+
+.event-label {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+.event-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.event-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+.event-option input {
+    width: auto;
+
+    accent-color: var(--gold);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.inquiry-form textarea {
+    min-height: 130px;
 
     resize: vertical;
 }
 
-.inquiry-form input:focus,
-.inquiry-form select:focus,
-.inquiry-form textarea:focus {
 
-    border-color: #777;
-}
+/* =========================
+   SUBMIT
+========================= */
 
 .submit-button {
-
-    padding: 18px;
+    padding: 19px;
 
     border: none;
 
-    background: white;
+    background:
+        linear-gradient(
+            135deg,
+            #b89445,
+            #8d6d2f
+        );
 
-    color: black;
+    color: white;
+
+    font-size: 11px;
 
     font-weight: 600;
 
-    cursor: pointer;
+    letter-spacing: 2px;
 
-    letter-spacing: 1px;
+    cursor: pointer;
 
     transition: .3s;
 }
 
 .submit-button:hover {
+    transform: translateY(-2px);
 
-    background: #ddd;
+    box-shadow:
+        0 12px 30px rgba(141,109,47,.25);
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
+    padding: 45px 7%;
 
-    padding: 40px 7%;
+    background: #171717;
 
-    border-top: 1px solid #222;
+    color: #aaa;
 
     display: flex;
 
     justify-content: space-between;
 
-    color: #666;
+    font-size: 11px;
 
-    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-gold {
+    color: #d4b96c;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width: 800px) {
+@media(max-width: 850px) {
 
     .navbar {
-
         padding: 20px;
     }
 
-    .nav-links {
+    .logo {
+        font-size: 14px;
+    }
 
+    .nav-links {
         display: none;
     }
 
     .contact-buttons {
-
         left: 20px;
 
-        top: 70px;
+        top: 65px;
+    }
+
+    .contact-buttons a {
+        padding: 9px 12px;
+
+        font-size: 10px;
     }
 
     .hero-content {
-
-        left: 7%;
-
-        right: 7%;
-
-        bottom: 12%;
+        width: 92%;
     }
 
     .hero-content h1 {
-
-        font-size: 55px;
+        font-size: 58px;
 
         letter-spacing: -2px;
     }
 
-    .services {
+    .hero-label {
+        letter-spacing: 3px;
 
+        font-size: 9px;
+    }
+
+    .hero-bottom {
+        letter-spacing: 2px;
+
+        font-size: 8px;
+    }
+
+    .services {
         grid-template-columns: 1fr;
     }
 
     .gallery {
-
         grid-template-columns: 1fr;
     }
 
     .gallery img {
-
         height: 300px;
     }
 
     .inquiry-wrapper {
-
         grid-template-columns: 1fr;
 
         gap: 50px;
     }
 
     .form-row {
+        grid-template-columns: 1fr;
+    }
 
+    .event-options {
         grid-template-columns: 1fr;
     }
 
     .footer {
-
         flex-direction: column;
 
         gap: 15px;
@@ -628,6 +865,7 @@ body {
 <div class="contact-buttons">
 
     <a
+        class="whatsapp-button"
         href="https://wa.me/2348060264514"
         target="_blank">
 
@@ -635,8 +873,8 @@ body {
 
     </a>
 
-
     <a
+        class="call-button"
         href="tel:+2348060264514">
 
         Call
@@ -653,7 +891,6 @@ body {
     id="home">
 
     <div class="video-sticky">
-
 
         <video
             id="heroVideo"
@@ -675,7 +912,6 @@ body {
         <div
             class="hero-content"
             id="heroContent">
-
 
             <div class="hero-label">
 
@@ -704,6 +940,14 @@ body {
 
             </div>
 
+        </div>
+
+
+        <div class="scroll-indicator">
+
+            SCROLL
+
+            <div class="scroll-line"></div>
 
         </div>
 
@@ -718,10 +962,12 @@ body {
     class="section"
     id="services">
 
-
     <h2 class="section-title">
 
-        What We Do
+        Our
+        <span class="gold-text">
+            Services
+        </span>
 
     </h2>
 
@@ -740,8 +986,9 @@ body {
             </h3>
 
             <p>
-                Professional ushers who welcome,
-                guide and assist your guests.
+                Professional ushers to welcome,
+                guide and assist your guests
+                throughout your event.
             </p>
 
         </div>
@@ -758,8 +1005,9 @@ body {
             </h3>
 
             <p>
-                Organized guest assistance for
-                smooth event experiences.
+                Organized guest assistance
+                designed to keep your event
+                flowing smoothly.
             </p>
 
         </div>
@@ -776,8 +1024,9 @@ body {
             </h3>
 
             <p>
-                Reliable support before and
-                throughout your occasion.
+                Reliable event support before
+                and throughout your special
+                occasion.
             </p>
 
         </div>
@@ -794,8 +1043,9 @@ body {
             </h3>
 
             <p>
-                Professional security support
-                for your event.
+                Professional guard support
+                for events and special
+                occasions.
             </p>
 
         </div>
@@ -812,10 +1062,12 @@ body {
     class="section"
     id="gallery">
 
-
     <h2 class="section-title">
 
-        Event Moments
+        Event
+        <span class="gold-text">
+            Moments
+        </span>
 
     </h2>
 
@@ -851,12 +1103,11 @@ body {
 </section>
 
 
-<!-- ================= INQUIRY FORM ================= -->
+<!-- ================= INQUIRY ================= -->
 
 <section
     class="section inquiry"
     id="inquiry">
-
 
     <div class="inquiry-wrapper">
 
@@ -865,17 +1116,21 @@ body {
 
             <h2 class="inquiry-title">
 
-                Let's Plan
+                Plan Your
+
                 <br>
-                Your Event.
+
+                <span>Perfect Event.</span>
 
             </h2>
 
 
             <p class="inquiry-text">
 
-                Tell us about your event and
-                send an inquiry directly to
+                Tell us what you are planning.
+                Select the type of event,
+                provide your details and send
+                your inquiry directly to
                 PERONNESS.
 
             </p>
@@ -906,52 +1161,172 @@ body {
             </div>
 
 
-            <div class="form-row">
+            <!-- EVENT TYPES -->
 
-                <select
-                    id="eventType"
-                    required>
+            <div class="event-box">
 
-                    <option value="">
-                        Select Event Type
-                    </option>
+                <label class="event-label">
 
-                    <option>
+                    What type of event are you planning?
+
+                </label>
+
+
+                <div class="event-options">
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Wedding">
+
                         Wedding
-                    </option>
 
-                    <option>
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Birthday">
+
                         Birthday
-                    </option>
 
-                    <option>
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Corporate Event">
+
                         Corporate Event
-                    </option>
 
-                    <option>
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Graduation">
+
+                        Graduation
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Naming Ceremony">
+
+                        Naming Ceremony
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Engagement">
+
+                        Engagement
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Conference">
+
+                        Conference
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Dinner">
+
+                        Dinner
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Party">
+
                         Party
-                    </option>
 
-                    <option>
-                        Other
-                    </option>
+                    </label>
 
-                </select>
 
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Funeral">
+
+                        Funeral
+
+                    </label>
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            name="event"
+                            value="Other Event">
+
+                        Other Event
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
 
                 <input
                     type="date"
                     id="eventDate"
                     required>
 
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Event Location"
+                    required>
+
             </div>
-
-
-            <input
-                type="text"
-                id="location"
-                placeholder="Event Location"
-                required>
 
 
             <input
@@ -962,14 +1337,14 @@ body {
 
             <textarea
                 id="message"
-                placeholder="Tell us about your event..."></textarea>
+                placeholder="Tell us more about your event..."></textarea>
 
 
             <button
                 type="submit"
                 class="submit-button">
 
-                SUBMIT INQUIRY
+                SEND INQUIRY ON WHATSAPP
 
             </button>
 
@@ -986,22 +1361,28 @@ body {
 <footer class="footer">
 
     <div>
-        PERONNESS USHERING & GUARD
+
+        PERONNESS
+        <span class="footer-gold">
+            USHERING & GUARD
+        </span>
+
     </div>
 
     <div>
+
         +234 806 026 4514
+
     </div>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
-
-/* ================= VIDEO SCROLL ================= */
+/* =========================
+   VIDEO SCROLL
+========================= */
 
 const video =
     document.getElementById(
@@ -1018,7 +1399,6 @@ const heroContent =
         "heroContent"
     );
 
-
 let targetProgress = 0;
 
 let currentProgress = 0;
@@ -1029,16 +1409,13 @@ function calculateScroll() {
     const rect =
         section.getBoundingClientRect();
 
-
     const scrollDistance =
         section.offsetHeight -
         window.innerHeight;
 
-
     targetProgress =
         -rect.top /
         scrollDistance;
-
 
     targetProgress =
         Math.max(
@@ -1048,18 +1425,16 @@ function calculateScroll() {
                 targetProgress
             )
         );
-
 }
 
 
 function animate() {
 
-
     currentProgress +=
         (
             targetProgress -
             currentProgress
-        ) * .20;
+        ) * .22;
 
 
     if (video.duration) {
@@ -1071,24 +1446,21 @@ function animate() {
     }
 
 
-    /* TEXT MOVEMENT */
+    /* HERO TEXT MOVEMENT */
 
     const move =
-        currentProgress *
-        -220;
-
+        currentProgress * -180;
 
     const scale =
         1 -
-        currentProgress *
-        .18;
+        currentProgress * .15;
 
 
     let opacity = 1;
 
 
     if (
-        currentProgress > .55
+        currentProgress > .45
     ) {
 
         opacity =
@@ -1096,8 +1468,8 @@ function animate() {
             (
                 (
                     currentProgress -
-                    .55
-                ) / .25
+                    .45
+                ) / .40
             );
 
     }
@@ -1105,8 +1477,9 @@ function animate() {
 
     heroContent.style.transform =
 
-        `translateY(
-            calc(-0% + ${move}px)
+        `translate(
+            -50%,
+            calc(-50% + ${move}px)
         )
         scale(${scale})`;
 
@@ -1121,7 +1494,6 @@ function animate() {
     requestAnimationFrame(
         animate
     );
-
 }
 
 
@@ -1133,25 +1505,24 @@ window.addEventListener(
     }
 );
 
-
 window.addEventListener(
     "resize",
     calculateScroll
 );
-
 
 video.addEventListener(
     "loadedmetadata",
     calculateScroll
 );
 
-
 calculateScroll();
 
 animate();
 
 
-/* ================= INQUIRY FORM ================= */
+/* =========================
+   INQUIRY FORM
+========================= */
 
 const form =
     document.getElementById(
@@ -1162,7 +1533,6 @@ const form =
 form.addEventListener(
     "submit",
     function(event) {
-
 
         event.preventDefault();
 
@@ -1179,10 +1549,16 @@ form.addEventListener(
             ).value;
 
 
-        const eventType =
-            document.getElementById(
-                "eventType"
-            ).value;
+        const eventTypes =
+            Array.from(
+                document.querySelectorAll(
+                    'input[name="event"]:checked'
+                )
+            )
+            .map(
+                checkbox =>
+                    checkbox.value
+            );
 
 
         const eventDate =
@@ -1209,7 +1585,13 @@ form.addEventListener(
             ).value;
 
 
-        const text =
+        const selectedEvents =
+            eventTypes.length
+                ? eventTypes.join(", ")
+                : "Not specified";
+
+
+        const whatsappMessage =
 
 `Hello PERONNESS USHERING & GUARD.
 
@@ -1219,7 +1601,7 @@ Name: ${name}
 
 Phone: ${phone}
 
-Event Type: ${eventType}
+Event Type(s): ${selectedEvents}
 
 Event Date: ${eventDate}
 
@@ -1227,7 +1609,7 @@ Event Location: ${location}
 
 Estimated Guests: ${guests}
 
-Message:
+Additional Information:
 ${message}`;
 
 
@@ -1236,7 +1618,7 @@ ${message}`;
             "https://wa.me/2348060264514?text="
             +
             encodeURIComponent(
-                text
+                whatsappMessage
             );
 
 
@@ -1246,11 +1628,9 @@ ${message}`;
         );
 
     }
-
 );
 
 </script>
-
 
 </body>
 </html>
