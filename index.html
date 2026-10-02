@@ -6,8 +6,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PERONNESS USHERING AND GUARD</title>
 
@@ -1184,6 +1183,7 @@ footer{
 
     .logo small{
         font-size:5px;
+
         letter-spacing:1.5px;
     }
 
@@ -1255,7 +1255,9 @@ footer{
     }
 
 
-    /* MOBILE HERO */
+    /* =========================
+       BIGGER MOBILE HERO TEXT
+    ========================= */
 
     .hero-scroll{
         height:180vh;
@@ -1286,7 +1288,7 @@ footer{
     }
 
     .hero-label{
-        font-size:11px;
+        font-size:13px;
 
         letter-spacing:3px;
 
@@ -1294,21 +1296,21 @@ footer{
     }
 
     .hero-title{
-        font-size:48px;
+        font-size:58px;
 
         line-height:.95;
 
-        letter-spacing:-1px;
+        letter-spacing:-1.5px;
     }
 
     .hero-subtitle{
-        font-size:29px;
+        font-size:34px;
 
         margin-top:20px;
     }
 
     .hero-description{
-        font-size:13px;
+        font-size:15px;
 
         line-height:1.7;
 
@@ -1323,9 +1325,9 @@ footer{
 
     .gold-btn,
     .red-btn{
-        font-size:9px;
+        font-size:11px;
 
-        padding:12px 15px;
+        padding:13px 17px;
     }
 
     .scroll-indicator{
@@ -1335,7 +1337,7 @@ footer{
     }
 
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     section.standard{
         padding:60px 5%;
@@ -1452,15 +1454,15 @@ footer{
     }
 
     .hero-title{
-        font-size:39px;
+        font-size:46px;
     }
 
     .hero-subtitle{
-        font-size:25px;
+        font-size:28px;
     }
 
     .hero-description{
-        font-size:11px;
+        font-size:13px;
     }
 
 }
@@ -2280,7 +2282,7 @@ loading="lazy"
 
 
 <!-- =========================
-     CONTACT
+     CONTACT / INQUIRY
 ========================= -->
 
 <section
@@ -2665,17 +2667,8 @@ let targetVideoTime = 0;
 let animationRunning = false;
 
 
-/*
-   Tell browser to load
-   the video.
-*/
-
 heroVideo.load();
 
-
-/*
-   Video metadata loaded.
-*/
 
 heroVideo.addEventListener(
 "loadedmetadata",
@@ -2690,10 +2683,6 @@ updateHeroVideo();
 });
 
 
-/*
-   Video can play.
-*/
-
 heroVideo.addEventListener(
 "canplay",
 function(){
@@ -2704,11 +2693,6 @@ heroVideo.pause();
 
 });
 
-
-/*
-   Update video according
-   to scroll position.
-*/
 
 function updateHeroVideo(){
 
@@ -2746,19 +2730,10 @@ progress
 );
 
 
-/*
-   Convert scroll percentage
-   into video time.
-*/
-
 targetVideoTime =
 progress *
 heroVideo.duration;
 
-
-/*
-   Move video.
-*/
 
 if(
 Math.abs(
@@ -2784,10 +2759,6 @@ error
 
 }
 
-
-/*
-   Move text with video.
-*/
 
 const textMove =
 progress * 80;
@@ -2826,10 +2797,6 @@ animationRunning = false;
 }
 
 
-/*
-   Request animation frame.
-*/
-
 function requestVideoUpdate(){
 
 if(!animationRunning){
@@ -2845,10 +2812,6 @@ updateHeroVideo
 }
 
 
-/*
-   Scroll listener.
-*/
-
 window.addEventListener(
 "scroll",
 requestVideoUpdate,
@@ -2858,20 +2821,11 @@ passive:true
 );
 
 
-/*
-   Resize listener.
-*/
-
 window.addEventListener(
 "resize",
 requestVideoUpdate
 );
 
-
-/*
-   Load video again
-   after page loads.
-*/
 
 window.addEventListener(
 "load",
@@ -2966,10 +2920,6 @@ document.getElementById(
 ).value;
 
 
-/*
-   Create WhatsApp message.
-*/
-
 const whatsappText =
 
 "Hello PERONNESS USHERING AND GUARD,%0A%0A" +
@@ -3020,10 +2970,6 @@ message ||
 "None"
 );
 
-
-/*
-   Open WhatsApp.
-*/
 
 const whatsappURL =
 "https://wa.me/2348060264514?text=" +
