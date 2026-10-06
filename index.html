@@ -1,14 +1,22 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<title>PERONNESS USHERING AND GUARD</title>
+<meta
+name="theme-color"
+content="#000000"
+>
+
+<title>
+PERONNESS USHERING AND GUARD
+</title>
 
 <style>
 
@@ -27,6 +35,7 @@ html{
 }
 
 body{
+    margin:0;
     background:#050505;
     color:#fff;
     font-family:Arial,Helvetica,sans-serif;
@@ -34,13 +43,13 @@ body{
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 img{
-    display:block;
     max-width:100%;
+    display:block;
 }
 
 
@@ -53,73 +62,56 @@ header{
     top:0;
     left:0;
     width:100%;
-    z-index:9999;
-
-    background:rgba(0,0,0,.94);
-
+    z-index:1000;
+    background:rgba(0,0,0,.72);
     backdrop-filter:blur(12px);
-
     border-bottom:1px solid rgba(212,175,55,.25);
 }
 
 .nav{
-    width:100%;
-    max-width:1250px;
-    min-height:65px;
-
+    min-height:70px;
+    max-width:1400px;
     margin:auto;
-    padding:9px 18px;
-
+    padding:10px 25px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-
-    gap:15px;
+    gap:20px;
 }
 
 .logo{
     font-family:Georgia,serif;
-
-    font-size:15px;
+    font-size:16px;
     font-weight:bold;
-
+    letter-spacing:1px;
+    color:#fff;
     white-space:nowrap;
+}
+
+.logo span{
+    color:#d4af37;
 }
 
 .logo small{
     display:block;
-
-    color:#d4af37;
-
     font-family:Arial,sans-serif;
-
+    color:#aaa;
     font-size:7px;
-
-    letter-spacing:2px;
-
+    letter-spacing:3px;
     margin-top:3px;
 }
 
-
-/* NAVIGATION */
-
 nav{
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:17px;
+    gap:24px;
+    margin:auto;
 }
 
 nav a{
+    font-size:11px;
+    letter-spacing:1px;
     color:#ddd;
-
-    font-size:9px;
-
-    font-weight:bold;
-
     transition:.3s;
 }
 
@@ -127,81 +119,48 @@ nav a:hover{
     color:#d4af37;
 }
 
-
-/* MOBILE MENU BUTTON */
-
-.menu-btn{
-    display:none;
-
-    width:38px;
-    height:35px;
-
-    background:#050505;
-
-    color:#d4af37;
-
-    border:1px solid #d4af37;
-
-    border-radius:4px;
-
-    font-size:20px;
-
-    cursor:pointer;
-}
-
-
-/* HEADER ACTIONS */
-
 .header-actions{
     display:flex;
-
     align-items:center;
-
     gap:7px;
+}
 
+.whatsapp,
+.call{
+    display:inline-block;
+    border-radius:3px;
+    font-weight:bold;
+    font-size:8px;
+    letter-spacing:.5px;
+    padding:10px 12px;
     white-space:nowrap;
 }
 
 .whatsapp{
-    background:#159447;
-
-    color:#fff;
-
-    padding:10px 12px;
-
-    border-radius:4px;
-
-    font-size:8px;
-
-    font-weight:bold;
-
-    transition:.3s;
-}
-
-.whatsapp:hover{
-    background:#20b957;
+    background:#25D366;
+    color:#000;
 }
 
 .call{
-    border:1px solid #d4af37;
-
-    color:#d4af37;
-
-    padding:9px 12px;
-
-    border-radius:4px;
-
-    font-size:8px;
-
-    font-weight:bold;
-
-    transition:.3s;
+    background:#d4af37;
+    color:#000;
 }
 
+.whatsapp:hover,
 .call:hover{
-    background:#d4af37;
+    transform:translateY(-2px);
+}
 
-    color:#000;
+.menu-btn{
+    display:none;
+    width:38px;
+    height:36px;
+    border:1px solid #d4af37;
+    background:#050505;
+    color:#d4af37;
+    border-radius:3px;
+    font-size:20px;
+    cursor:pointer;
 }
 
 
@@ -211,57 +170,44 @@ nav a:hover{
 
 .hero-scroll{
     position:relative;
-
     height:180vh;
-
     background:#000;
 }
 
 .hero-sticky{
     position:sticky;
-
     top:0;
-
     height:100vh;
-
     width:100%;
-
     overflow:hidden;
-
     background:#000;
 }
 
 
-/* VIDEO */
+/* =========================
+   VIDEO
+========================= */
 
 .hero-video{
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     display:block;
-
     background:#000;
-
     opacity:.72;
-
     transform:scale(1.03);
 }
 
 
-/* DARK OVERLAY */
+/* =========================
+   DARK OVERLAY
+========================= */
 
 .hero-dark{
     position:absolute;
-
     inset:0;
-
     z-index:2;
 
     background:
@@ -274,13 +220,13 @@ nav a:hover{
 }
 
 
-/* BOTTOM OVERLAY */
+/* =========================
+   BOTTOM OVERLAY
+========================= */
 
 .hero-vignette{
     position:absolute;
-
     inset:0;
-
     z-index:3;
 
     background:
@@ -293,43 +239,32 @@ nav a:hover{
 }
 
 
-/* HERO TEXT */
+/* =========================
+   HERO TEXT
+========================= */
 
 .hero-content{
     position:absolute;
-
     z-index:5;
-
     top:50%;
-
     left:7%;
-
     transform:translateY(-50%);
-
     max-width:900px;
-
     will-change:transform,opacity;
 }
 
 .hero-label{
     color:#d4af37;
-
     font-size:10px;
-
     letter-spacing:4px;
-
     font-weight:bold;
-
     margin-bottom:17px;
 }
 
 .hero-title{
     font-family:Georgia,serif;
-
     font-size:clamp(43px,7vw,82px);
-
     line-height:.92;
-
     letter-spacing:-2px;
 }
 
@@ -339,131 +274,88 @@ nav a:hover{
 
 .hero-subtitle{
     margin-top:18px;
-
     font-family:Georgia,serif;
-
     color:#fff;
-
     font-size:clamp(25px,3vw,36px);
 }
 
 .hero-description{
     max-width:500px;
-
     margin-top:15px;
-
     color:#ddd;
-
     font-size:12px;
-
     line-height:1.8;
 }
 
 .hero-cta{
     display:flex;
-
     gap:10px;
-
     margin-top:25px;
 }
 
 .gold-btn{
     display:inline-block;
-
     padding:13px 19px;
-
     background:#d4af37;
-
     color:#050505;
-
     border-radius:3px;
-
     font-size:9px;
-
     font-weight:bold;
 }
 
 .red-btn{
     display:inline-block;
-
     padding:12px 19px;
-
-    border:1px solid #8e1717;
-
+    background:#8f1717;
     color:#fff;
-
     border-radius:3px;
-
     font-size:9px;
-
     font-weight:bold;
+}
+
+.gold-btn:hover,
+.red-btn:hover{
+    transform:translateY(-2px);
 }
 
 .scroll-indicator{
     position:absolute;
-
+    z-index:6;
     bottom:25px;
-
     left:7%;
-
-    z-index:8;
-
-    color:#aaa;
-
-    font-size:8px;
-
-    letter-spacing:3px;
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
+    color:#bbb;
+    font-size:8px;
+    letter-spacing:2px;
 }
 
 .scroll-line{
-    width:35px;
-
+    width:45px;
     height:1px;
-
     background:#d4af37;
 }
 
 
 /* =========================
-   GENERAL SECTIONS
+   GENERAL SECTION
 ========================= */
 
 section.standard{
-    padding:75px 6%;
+    padding:100px 7%;
+    background:#050505;
 }
 
-.container{
-    max-width:1200px;
-
-    margin:auto;
-}
-
-.section-label{
-    color:#d4af37;
-
-    font-size:9px;
-
-    letter-spacing:3px;
-
-    font-weight:bold;
-
-    margin-bottom:11px;
+section.dark{
+    background:#080808;
 }
 
 .section-title{
     font-family:Georgia,serif;
-
-    font-size:clamp(32px,5vw,54px);
-
+    font-size:54px;
     line-height:1;
-
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .section-title span{
@@ -471,13 +363,11 @@ section.standard{
 }
 
 .section-description{
-    max-width:650px;
-
-    color:#999;
-
-    font-size:12px;
-
+    max-width:700px;
+    color:#aaa;
+    font-size:14px;
     line-height:1.8;
+    margin-bottom:45px;
 }
 
 
@@ -485,94 +375,48 @@ section.standard{
    ABOUT
 ========================= */
 
-.about{
-    background:#070707;
-}
-
 .about-grid{
     display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:35px;
-
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
     align-items:center;
 }
 
 .about-text{
-    padding-right:20px;
+    padding-right:30px;
+}
+
+.about-text p{
+    color:#bbb;
+    font-size:14px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.about-points{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
 }
 
 .about-card{
-    padding:35px;
-
-    background:#101010;
-
-    border:1px solid rgba(212,175,55,.25);
-
-    position:relative;
-}
-
-.about-card:before{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:4px;
-    height:100%;
-
-    background:#d4af37;
+    border:1px solid rgba(212,175,55,.3);
+    padding:25px;
+    background:#0b0b0b;
 }
 
 .about-card h3{
+    color:#d4af37;
     font-family:Georgia,serif;
-
-    font-size:27px;
-
-    margin-bottom:15px;
+    font-size:20px;
+    margin-bottom:8px;
 }
 
 .about-card p{
     color:#999;
-
     font-size:11px;
-
-    line-height:1.8;
-}
-
-.about-points{
-    margin-top:20px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:10px;
-}
-
-.about-point{
-    padding:13px;
-
-    background:#0b0b0b;
-
-    border:1px solid #191919;
-
-    color:#ccc;
-
-    font-size:9px;
-}
-
-.about-point span{
-    display:block;
-
-    color:#d4af37;
-
-    font-size:17px;
-
-    margin-bottom:5px;
+    line-height:1.7;
 }
 
 
@@ -580,61 +424,41 @@ section.standard{
    SERVICES
 ========================= */
 
-.services{
-    background:#050505;
-}
-
 .services-grid{
-    margin-top:30px;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:13px;
+    gap:18px;
 }
 
 .service{
-    min-height:180px;
-
-    padding:25px;
-
-    background:#0d0d0d;
-
-    border:1px solid #1b1b1b;
-
+    min-height:190px;
+    padding:28px;
+    border:1px solid rgba(212,175,55,.25);
+    background:#0a0a0a;
     transition:.3s;
 }
 
 .service:hover{
+    border-color:#d4af37;
     transform:translateY(-5px);
-
-    border-color:rgba(212,175,55,.55);
 }
 
 .service-number{
     color:#d4af37;
-
-    font-size:9px;
-
+    font-size:11px;
     letter-spacing:2px;
-
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .service h3{
     font-family:Georgia,serif;
-
-    font-size:21px;
-
-    margin-bottom:10px;
+    font-size:24px;
+    margin-bottom:12px;
 }
 
 .service p{
-    color:#888;
-
-    font-size:10px;
-
+    color:#999;
+    font-size:12px;
     line-height:1.7;
 }
 
@@ -643,88 +467,55 @@ section.standard{
    PACKAGES
 ========================= */
 
-.packages{
-    background:#080808;
-}
-
 .package-grid{
-    margin-top:30px;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
+    gap:20px;
 }
 
 .package{
     position:relative;
-
-    min-height:405px;
-
-    padding:27px 22px;
-
-    background:#0e0e0e;
-
-    border:1px solid rgba(212,175,55,.22);
-
-    display:flex;
-
-    flex-direction:column;
+    min-height:410px;
+    padding:32px;
+    border:1px solid rgba(212,175,55,.25);
+    background:#090909;
 }
 
 .package.featured{
     border-color:#d4af37;
-
-    background:
-    linear-gradient(
-        145deg,
-        #151207,
-        #0b0b0b
-    );
+    transform:translateY(-8px);
 }
 
 .popular{
     position:absolute;
-
     top:0;
     right:0;
-
     background:#d4af37;
-
     color:#000;
-
     padding:7px 10px;
-
-    font-size:7px;
-
+    font-size:8px;
     font-weight:bold;
 }
 
 .package h3{
     font-family:Georgia,serif;
-
+    color:#fff;
     font-size:28px;
-
-    color:#d4af37;
+    margin-bottom:10px;
 }
 
 .package-price{
-    font-size:29px;
-
-    font-weight:bold;
-
-    margin-top:7px;
+    color:#d4af37;
+    font-family:Georgia,serif;
+    font-size:32px;
+    margin-bottom:15px;
 }
 
 .package-desc{
-    color:#777;
-
-    font-size:10px;
-
+    color:#999;
+    font-size:12px;
     line-height:1.7;
-
-    margin:12px 0 10px;
+    margin-bottom:20px;
 }
 
 .package ul{
@@ -733,37 +524,31 @@ section.standard{
 
 .package li{
     color:#bbb;
-
-    font-size:9px;
-
-    padding:7px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
+    font-size:11px;
+    line-height:1.6;
+    margin-bottom:6px;
+    padding-left:15px;
+    position:relative;
 }
 
 .package li:before{
-    content:"✓";
-
-    color:#d4af37;
-
-    font-weight:bold;
-
-    margin-right:7px;
+    content:"";
+    width:5px;
+    height:5px;
+    background:#d4af37;
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    top:8px;
 }
 
 .package-btn{
-    margin-top:auto;
-
-    text-align:center;
-
-    padding:12px;
-
-    background:#d4af37;
-
-    color:#000;
-
-    font-size:8px;
-
+    display:inline-block;
+    margin-top:20px;
+    padding:11px 15px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    font-size:9px;
     font-weight:bold;
 }
 
@@ -772,77 +557,42 @@ section.standard{
    TEAM
 ========================= */
 
-.team{
-    background:#050505;
-}
-
 .team-grid{
-    margin-top:30px;
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
-    gap:18px;
+    gap:25px;
 }
 
 .team-card{
-    height:320px;
-
+    height:360px;
     position:relative;
-
     overflow:hidden;
-
     background:#111;
-
-    border:1px solid #222;
+    border:1px solid rgba(212,175,55,.2);
 }
 
 .team-card img{
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
-    transition:transform .7s;
-}
-
-.team-card:hover img{
-    transform:scale(1.05);
 }
 
 .team-overlay{
     position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:flex-end;
-
+    inset:auto 0 0 0;
     padding:25px;
-
-    background:
-    linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.95)
-    );
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
 }
 
 .team-overlay h3{
+    color:#d4af37;
     font-family:Georgia,serif;
-
-    font-size:25px;
+    font-size:24px;
 }
 
 .team-overlay p{
-    color:#d4af37;
-
-    font-size:8px;
-
-    letter-spacing:2px;
-
+    color:#ccc;
+    font-size:11px;
     margin-top:5px;
 }
 
@@ -851,38 +601,23 @@ section.standard{
    GALLERY
 ========================= */
 
-.gallery{
-    background:#080808;
-}
-
 .gallery-grid{
-    margin-top:30px;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:10px;
 }
 
 .gallery-item{
-    height:180px;
-
+    height:230px;
     overflow:hidden;
-
     background:#111;
-
-    border:1px solid #191919;
 }
 
 .gallery-item img{
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
-    transition:transform .6s;
+    transition:.5s;
 }
 
 .gallery-item:hover img{
@@ -891,197 +626,135 @@ section.standard{
 
 
 /* =========================
-   CONTACT
+   INQUIRY FORM
 ========================= */
 
-.contact{
-    background:#050505;
-}
-
-.contact-grid{
-    display:grid;
-
-    grid-template-columns:.8fr 1.2fr;
-
-    gap:25px;
-
-    align-items:start;
-}
-
-.contact-info{
-    padding:30px;
-
-    background:#0d0d0d;
-
-    border-left:3px solid #d4af37;
-}
-
-.contact-info h3{
-    font-family:Georgia,serif;
-
-    font-size:31px;
-
-    line-height:1.1;
-
-    margin-bottom:15px;
-}
-
-.contact-info h3 span{
-    color:#d4af37;
-}
-
-.contact-info p{
-    color:#888;
-
-    font-size:11px;
-
-    line-height:1.8;
-}
-
-.contact-detail{
-    margin-top:22px;
-}
-
-.contact-detail small{
-    display:block;
-
-    color:#d4af37;
-
-    font-size:7px;
-
-    letter-spacing:2px;
-
-    margin-bottom:5px;
-}
-
-.contact-detail strong{
-    font-size:12px;
-}
-
-.inquiry-form{
-    padding:27px;
-
-    background:#101010;
-
-    border:1px solid rgba(212,175,55,.2);
-}
-
-.inquiry-form h3{
-    font-family:Georgia,serif;
-
-    font-size:26px;
-
-    margin-bottom:20px;
+.form-wrap{
+    max-width:950px;
+    margin:auto;
+    padding:40px;
+    background:#0a0a0a;
+    border:1px solid rgba(212,175,55,.25);
 }
 
 .form-grid{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
-    gap:10px;
+    gap:18px;
 }
 
 .form-group{
     display:flex;
-
     flex-direction:column;
+    gap:7px;
 }
 
 .form-full{
-    grid-column:1 / -1;
+    grid-column:1/-1;
 }
 
 .form-group label{
-    color:#888;
-
-    font-size:7px;
-
+    color:#d4af37;
+    font-size:9px;
     letter-spacing:1px;
-
-    margin-bottom:5px;
 }
 
-input,
-select,
-textarea{
+.form-group input,
+.form-group select,
+.form-group textarea{
     width:100%;
-
-    padding:11px;
-
+    border:1px solid #333;
     background:#050505;
-
     color:#fff;
-
-    border:1px solid #242424;
-
+    padding:13px;
     outline:none;
-
-    font-size:10px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
-    border-color:#d4af37;
-}
-
-textarea{
-    min-height:85px;
-
+.form-group textarea{
+    min-height:130px;
     resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#d4af37;
 }
 
 .event-grid{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:6px;
+    gap:8px;
 }
 
 .event-option{
-    padding:8px;
-
-    background:#050505;
-
-    border:1px solid #222;
-
-    color:#aaa;
-
-    font-size:8px;
+    position:relative;
 }
 
 .event-option input{
-    width:auto;
+    position:absolute;
+    opacity:0;
+}
 
-    margin-right:3px;
+.event-option label{
+    display:block;
+    padding:12px;
+    text-align:center;
+    border:1px solid #333;
+    color:#bbb;
+    cursor:pointer;
+    font-size:10px;
+}
 
-    accent-color:#d4af37;
+.event-option input:checked + label{
+    border-color:#d4af37;
+    background:rgba(212,175,55,.1);
+    color:#d4af37;
 }
 
 .submit-btn{
+    margin-top:20px;
     width:100%;
-
-    border:0;
-
-    margin-top:15px;
-
-    padding:13px;
-
-    background:#159447;
-
-    color:#fff;
-
+    padding:16px;
+    border:none;
+    background:#d4af37;
+    color:#000;
     font-weight:bold;
-
-    font-size:9px;
-
     cursor:pointer;
+    font-size:11px;
 }
 
-.submit-btn:hover{
-    background:#20b957;
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-box{
+    padding:30px;
+    border:1px solid rgba(212,175,55,.25);
+    background:#0a0a0a;
+}
+
+.contact-box h3{
+    font-family:Georgia,serif;
+    color:#d4af37;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.contact-box p{
+    color:#aaa;
+    font-size:12px;
+    line-height:1.8;
+    margin-bottom:10px;
 }
 
 
@@ -1090,76 +763,23 @@ textarea{
 ========================= */
 
 footer{
-    padding:28px 6%;
-
-    background:#020202;
-
+    background:#000;
     border-top:1px solid rgba(212,175,55,.2);
+    padding:30px 7%;
 }
 
 .footer-inner{
-    max-width:1200px;
-
+    max-width:1400px;
     margin:auto;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:20px;
 }
 
-.footer-logo{
-    font-family:Georgia,serif;
-
-    font-size:15px;
-}
-
-.footer-logo span{
-    color:#d4af37;
-}
-
-.footer-copy{
-    color:#555;
-
-    font-size:8px;
-}
-
-.footer-phone{
-    color:#d4af37;
-
+.footer-inner p{
+    color:#777;
     font-size:9px;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:950px){
-
-    nav{
-        display:none;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .package-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
 }
 
 
@@ -1171,9 +791,7 @@ footer{
 
     .nav{
         min-height:60px;
-
         padding:8px 10px;
-
         gap:5px;
     }
 
@@ -1183,33 +801,27 @@ footer{
 
     .logo small{
         font-size:5px;
-
         letter-spacing:1.5px;
     }
 
     .menu-btn{
         display:block;
-
         order:3;
     }
 
     .header-actions{
         margin-left:auto;
-
         gap:4px;
     }
 
     .whatsapp{
         padding:8px 8px;
-
         font-size:7px;
     }
 
     .call{
         display:block;
-
         padding:7px 8px;
-
         font-size:7px;
     }
 
@@ -1218,23 +830,14 @@ footer{
 
     nav{
         position:absolute;
-
         top:60px;
-
         left:0;
-
         width:100%;
-
         background:rgba(0,0,0,.98);
-
         display:none;
-
         flex-direction:column;
-
         gap:0;
-
         padding:8px 0;
-
         border-bottom:1px solid #d4af37;
     }
 
@@ -1244,19 +847,15 @@ footer{
 
     nav a{
         width:100%;
-
         padding:14px 20px;
-
         text-align:center;
-
         font-size:10px;
-
         border-bottom:1px solid rgba(255,255,255,.05);
     }
 
 
     /* =========================
-       BIGGER MOBILE HERO TEXT
+       MOBILE HERO
     ========================= */
 
     .hero-scroll{
@@ -1269,75 +868,64 @@ footer{
 
     .hero-video{
         display:block;
-
         width:100%;
-
         height:100%;
-
         object-fit:cover;
-
         opacity:.72;
     }
 
     .hero-content{
         left:6%;
-
         right:6%;
-
         max-width:none;
     }
 
     .hero-label{
         font-size:13px;
-
         letter-spacing:3px;
-
         margin-bottom:18px;
     }
 
     .hero-title{
         font-size:58px;
-
         line-height:.95;
-
         letter-spacing:-1.5px;
     }
 
     .hero-subtitle{
         font-size:34px;
-
         margin-top:20px;
     }
 
+    /* IMPORTANT:
+       HERO DESCRIPTION IS NOW BIGGER */
+
     .hero-description{
-        font-size:15px;
-
+        font-size:21px;
         line-height:1.7;
-
         max-width:520px;
     }
 
     .hero-cta{
         flex-wrap:wrap;
-
         margin-top:22px;
     }
 
     .gold-btn,
     .red-btn{
         font-size:11px;
-
         padding:13px 17px;
     }
 
     .scroll-indicator{
         left:6%;
-
         font-size:7px;
     }
 
 
-    /* GENERAL SECTIONS */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section.standard{
         padding:60px 5%;
@@ -1348,8 +936,30 @@ footer{
     }
 
     .section-description{
-        font-size:11px;
+        font-size:16px;
+        line-height:1.7;
     }
+
+
+    /* IMPORTANT:
+       SMALL SECTION DESCRIPTIONS ARE NOW BIGGER */
+
+    .service p,
+    .package-desc,
+    .package li,
+    .team-card p,
+    .gallery-caption,
+    .form-intro,
+    .contact-text,
+    .about-text p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .package li{
+        margin-bottom:7px;
+    }
+
 
     .about-grid{
         grid-template-columns:1fr;
@@ -1413,7 +1023,6 @@ footer{
 
     .footer-inner{
         flex-direction:column;
-
         text-align:center;
     }
 
@@ -1441,15 +1050,12 @@ footer{
     .whatsapp,
     .call{
         padding:7px 5px;
-
         font-size:6px;
     }
 
     .menu-btn{
         width:34px;
-
         height:32px;
-
         font-size:18px;
     }
 
@@ -1462,7 +1068,8 @@ footer{
     }
 
     .hero-description{
-        font-size:13px;
+        font-size:20px;
+        line-height:1.65;
     }
 
 }
@@ -1480,10 +1087,14 @@ footer{
 
 }
 
+
+/* =========================
+   END CSS
+========================= */
+
 </style>
 
 </head>
-
 
 <body>
 
@@ -1500,27 +1111,44 @@ footer{
 <a href="#home" class="logo">
 
 PERONNESS
+<span>USHERING AND GUARD</span>
 
-<small>USHERING & GUARD</small>
+<small>
+EVENT PLANNER
+</small>
 
 </a>
 
 
 <nav id="mobileNav">
 
-<a href="#home">HOME</a>
+<a href="#home">
+HOME
+</a>
 
-<a href="#about">ABOUT</a>
+<a href="#about">
+ABOUT
+</a>
 
-<a href="#services">SERVICES</a>
+<a href="#services">
+SERVICES
+</a>
 
-<a href="#packages">PACKAGES</a>
+<a href="#packages">
+PACKAGES
+</a>
 
-<a href="#team">TEAM</a>
+<a href="#team">
+TEAM
+</a>
 
-<a href="#gallery">GALLERY</a>
+<a href="#gallery">
+GALLERY
+</a>
 
-<a href="#contact">CONTACT</a>
+<a href="#contact">
+CONTACT
+</a>
 
 </nav>
 
@@ -1542,9 +1170,6 @@ href="tel:+2348060264514"
 CALL
 </a>
 
-</div>
-
-
 <button
 class="menu-btn"
 id="menuBtn"
@@ -1552,6 +1177,8 @@ aria-label="Open menu"
 >
 ☰
 </button>
+
+</div>
 
 
 </div>
@@ -1578,7 +1205,7 @@ id="heroVideo"
 muted
 playsinline
 webkit-playsinline
-preload="metadata"
+preload="auto"
 >
 
 <source
@@ -1674,81 +1301,51 @@ SCROLL TO EXPLORE
 ========================= -->
 
 <section
-class="standard about"
+class="standard"
 id="about"
 >
 
-<div class="container">
-
 <div class="about-grid">
-
 
 <div class="about-text">
 
-<div class="section-label">
-ABOUT PERONNESS
+<div class="section-title">
+
+ABOUT
+<span>PERONNESS</span>
+
 </div>
 
+<p>
 
-<h2 class="section-title">
+Peronness Ushering and Guard provides professional
+event planning, ushering, guest management and
+security services designed to make every occasion
+organized, comfortable and memorable.
 
-PROFESSIONAL.<br>
+</p>
 
-<span>RELIABLE.</span>
+<p>
 
-</h2>
-
-
-<p class="section-description">
-
-PERONNESS USHERING AND GUARD is dedicated to providing
-professional event planning, ushering, guest management
-and security support.
-
-Our goal is to help clients create organized, memorable
-and well-managed events.
+From intimate celebrations to large weddings and
+special events, our team focuses on excellent
+presentation, guest experience and smooth event
+coordination.
 
 </p>
 
 
 <div class="about-points">
 
-<div class="about-point">
+<div class="about-card">
 
-<span>01</span>
+<h3>
+Professional
+</h3>
 
-Professional Team
-
-</div>
-
-
-<div class="about-point">
-
-<span>02</span>
-
-Guest Management
-
-</div>
-
-
-<div class="about-point">
-
-<span>03</span>
-
-Event Security
-
-</div>
-
-
-<div class="about-point">
-
-<span>04</span>
-
-Event Support
-
-</div>
-
-</div>
+<p>
+Trained and organized event support.
+</p>
 
 </div>
 
@@ -1756,26 +1353,45 @@ Event Support
 <div class="about-card">
 
 <h3>
-
-Your Event.<br>
-
-Our Responsibility.
-
+Reliable
 </h3>
 
-
 <p>
-
-From the moment guests arrive until your event ends,
-our team is available to help create a smooth,
-organized and professional experience.
-
+Dependable support before and during your event.
 </p>
 
 </div>
 
 
+<div class="about-card">
+
+<h3>
+Elegant
+</h3>
+
+<p>
+Premium presentation for special occasions.
+</p>
+
 </div>
+
+
+<div class="about-card">
+
+<h3>
+Secure
+</h3>
+
+<p>
+Professional security and guest management.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1788,28 +1404,22 @@ organized and professional experience.
 ========================= -->
 
 <section
-class="standard services"
+class="standard dark"
 id="services"
 >
 
-<div class="container">
+<div class="section-title">
 
-<div class="section-label">
-WHAT WE DO
+OUR
+<span>SERVICES</span>
+
 </div>
-
-
-<h2 class="section-title">
-
-OUR <span>SERVICES</span>
-
-</h2>
-
 
 <p class="section-description">
 
-Professional services designed for different types
-of events.
+Professional event solutions designed to help your
+occasion run smoothly from preparation to the final
+guest departure.
 
 </p>
 
@@ -1819,13 +1429,19 @@ of events.
 
 <div class="service">
 
-<div class="service-number">01</div>
+<div class="service-number">
+01
+</div>
 
-<h3>Event Planning</h3>
+<h3>
+Event Planning
+</h3>
 
 <p>
-Planning and coordination for weddings, birthdays,
-corporate events and other occasions.
+
+Complete planning support for weddings, birthdays,
+corporate events and special occasions.
+
 </p>
 
 </div>
@@ -1833,13 +1449,19 @@ corporate events and other occasions.
 
 <div class="service">
 
-<div class="service-number">02</div>
+<div class="service-number">
+02
+</div>
 
-<h3>Event Ushers</h3>
+<h3>
+Ushering
+</h3>
 
 <p>
-Professional ushers to welcome, guide and assist
-your guests.
+
+Professional ushers to welcome guests, provide
+direction and maintain a smooth guest experience.
+
 </p>
 
 </div>
@@ -1847,13 +1469,19 @@ your guests.
 
 <div class="service">
 
-<div class="service-number">03</div>
+<div class="service-number">
+03
+</div>
 
-<h3>Event Security</h3>
+<h3>
+Guest Management
+</h3>
 
 <p>
-Professional security support to help keep your event
-safe and organized.
+
+Organized guest reception, seating assistance,
+VIP support and event coordination.
+
 </p>
 
 </div>
@@ -1861,12 +1489,19 @@ safe and organized.
 
 <div class="service">
 
-<div class="service-number">04</div>
+<div class="service-number">
+04
+</div>
 
-<h3>Guest Management</h3>
+<h3>
+Security
+</h3>
 
 <p>
-Professional guest reception and movement management.
+
+Professional security support for crowd control,
+access management and event safety.
+
 </p>
 
 </div>
@@ -1874,12 +1509,19 @@ Professional guest reception and movement management.
 
 <div class="service">
 
-<div class="service-number">05</div>
+<div class="service-number">
+05
+</div>
 
-<h3>Crowd Control</h3>
+<h3>
+Wedding Events
+</h3>
 
 <p>
-Support for entrances, exits and crowded event areas.
+
+Elegant support for Nigerian weddings and traditional
+celebrations.
+
 </p>
 
 </div>
@@ -1887,19 +1529,23 @@ Support for entrances, exits and crowded event areas.
 
 <div class="service">
 
-<div class="service-number">06</div>
+<div class="service-number">
+06
+</div>
 
-<h3>VIP Assistance</h3>
+<h3>
+Birthday Events
+</h3>
 
 <p>
-Special assistance and professional support for VIP
-guests.
+
+Professional assistance for birthday celebrations,
+private parties and special occasions.
+
 </p>
 
 </div>
 
-
-</div>
 
 </div>
 
@@ -1912,27 +1558,21 @@ guests.
 ========================= -->
 
 <section
-class="standard packages"
+class="standard"
 id="packages"
 >
 
-<div class="container">
+<div class="section-title">
 
-<div class="section-label">
-EVENT PACKAGES
+EVENT
+<span>PACKAGES</span>
+
 </div>
-
-
-<h2 class="section-title">
-
-CHOOSE YOUR <span>PACKAGE</span>
-
-</h2>
-
 
 <p class="section-description">
 
-Choose the package that best matches your event.
+Choose the package that best matches the size,
+style and level of support required for your event.
 
 </p>
 
@@ -1942,10 +1582,12 @@ Choose the package that best matches your event.
 
 <div class="package">
 
-<h3>Basic</h3>
+<h3>
+Basic
+</h3>
 
 <div class="package-price">
-₦200,000
+₦400,000
 </div>
 
 <p class="package-desc">
@@ -1957,20 +1599,31 @@ ushering and basic event support.
 
 <ul>
 
-<li>Professional Event Ushers</li>
+<li>
+Professional Event Ushers
+</li>
 
-<li>Guest Reception</li>
+<li>
+Guest Reception
+</li>
 
-<li>Guest Assistance</li>
+<li>
+Guest Assistance
+</li>
 
-<li>Basic Event Coordination</li>
+<li>
+Basic Event Coordination
+</li>
 
-<li>Basic Security Support</li>
+<li>
+Basic Security Support
+</li>
 
-<li>Event Day Assistance</li>
+<li>
+Event Day Assistance
+</li>
 
 </ul>
-
 
 <a
 href="#contact"
@@ -1989,7 +1642,9 @@ CHOOSE BASIC
 MOST POPULAR
 </div>
 
-<h3>Standard</h3>
+<h3>
+Standard
+</h3>
 
 <div class="package-price">
 ₦800,000
@@ -2004,19 +1659,33 @@ stronger coordination and support.
 
 <ul>
 
-<li>Professional Event Planning</li>
+<li>
+Professional Event Planning
+</li>
 
-<li>Expanded Ushering Team</li>
+<li>
+Expanded Ushering Team
+</li>
 
-<li>Guest Management</li>
+<li>
+Guest Management
+</li>
 
-<li>Event Coordination</li>
+<li>
+Event Coordination
+</li>
 
-<li>Enhanced Security</li>
+<li>
+Enhanced Security
+</li>
 
-<li>Crowd Management</li>
+<li>
+Crowd Management
+</li>
 
-<li>VIP Guest Assistance</li>
+<li>
+VIP Guest Assistance
+</li>
 
 </ul>
 
@@ -2033,7 +1702,9 @@ CHOOSE STANDARD
 
 <div class="package">
 
-<h3>Premium</h3>
+<h3>
+Premium
+</h3>
 
 <div class="package-price">
 ₦2,000,000
@@ -2048,19 +1719,33 @@ extensive planning and coordination.
 
 <ul>
 
-<li>Full Event Planning</li>
+<li>
+Full Event Planning
+</li>
 
-<li>Large Ushering Team</li>
+<li>
+Large Ushering Team
+</li>
 
-<li>Dedicated Security Team</li>
+<li>
+Dedicated Security Team
+</li>
 
-<li>VIP Management</li>
+<li>
+VIP Management
+</li>
 
-<li>Crowd & Access Control</li>
+<li>
+Crowd & Access Control
+</li>
 
-<li>Full Event Day Support</li>
+<li>
+Full Event Day Support
+</li>
 
-<li>Dedicated Event Assistance</li>
+<li>
+Dedicated Event Assistance
+</li>
 
 </ul>
 
@@ -2076,8 +1761,6 @@ CHOOSE PREMIUM
 
 </div>
 
-</div>
-
 </section>
 
 
@@ -2087,27 +1770,22 @@ CHOOSE PREMIUM
 ========================= -->
 
 <section
-class="standard team"
+class="standard dark"
 id="team"
 >
 
-<div class="container">
+<div class="section-title">
 
-<div class="section-label">
-OUR PEOPLE
+OUR
+<span>PEOPLE</span>
+
 </div>
-
-
-<h2 class="section-title">
-
-MEET THE <span>TEAM</span>
-
-</h2>
-
 
 <p class="section-description">
 
-Our professional team is ready to support your event.
+Meet the professional teams behind the event experience.
+Our people work together to provide organized ushering,
+event assistance and security support.
 
 </p>
 
@@ -2119,21 +1797,18 @@ Our professional team is ready to support your event.
 
 <img
 src="security-team.jpg"
-alt="Peronness Security Team"
-loading="lazy"
+alt="Peronness security team"
 >
 
 <div class="team-overlay">
 
-<div>
-
-<h3>Security Team</h3>
+<h3>
+Security Team
+</h3>
 
 <p>
-PROTECTION & CROWD MANAGEMENT
+Professional event security and access support.
 </p>
-
-</div>
 
 </div>
 
@@ -2144,28 +1819,23 @@ PROTECTION & CROWD MANAGEMENT
 
 <img
 src="workers-team.jpg"
-alt="Peronness Event Team"
-loading="lazy"
+alt="Peronness workers team"
 >
 
 <div class="team-overlay">
 
-<div>
-
-<h3>Event Team</h3>
+<h3>
+Workers Team
+</h3>
 
 <p>
-USHERS & EVENT SUPPORT
+Dedicated event workers and professional support team.
 </p>
 
 </div>
 
 </div>
 
-</div>
-
-
-</div>
 
 </div>
 
@@ -2178,28 +1848,21 @@ USHERS & EVENT SUPPORT
 ========================= -->
 
 <section
-class="standard gallery"
+class="standard"
 id="gallery"
 >
 
-<div class="container">
+<div class="section-title">
 
-<div class="section-label">
-OUR WORK
+OUR
+<span>WORK</span>
+
 </div>
-
-
-<h2 class="section-title">
-
-EVENT <span>GALLERY</span>
-
-</h2>
-
 
 <p class="section-description">
 
-A selection of event moments and our professional
-team.
+A look at the events, celebrations and professional
+services delivered by Peronness Ushering and Guard.
 
 </p>
 
@@ -2211,8 +1874,7 @@ team.
 
 <img
 src="gallery1.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
@@ -2222,8 +1884,7 @@ loading="lazy"
 
 <img
 src="gallery2.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
@@ -2233,8 +1894,7 @@ loading="lazy"
 
 <img
 src="gallery3.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
@@ -2244,8 +1904,7 @@ loading="lazy"
 
 <img
 src="gallery4.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
@@ -2255,8 +1914,7 @@ loading="lazy"
 
 <img
 src="gallery5.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
@@ -2266,14 +1924,11 @@ loading="lazy"
 
 <img
 src="gallery6.jpg"
-alt="Peronness Event"
-loading="lazy"
+alt="Peronness event"
 >
 
 </div>
 
-
-</div>
 
 </div>
 
@@ -2286,84 +1941,28 @@ loading="lazy"
 ========================= -->
 
 <section
-class="standard contact"
+class="standard dark"
 id="contact"
 >
 
-<div class="container">
+<div class="section-title">
 
-<div class="contact-grid">
+EVENT
+<span>INQUIRY</span>
 
-
-<div class="contact-info">
-
-<div class="section-label">
-LET'S WORK TOGETHER
 </div>
 
+<p class="section-description">
 
-<h3>
-
-PLAN YOUR<br>
-
-<span>EVENT.</span>
-
-</h3>
-
-
-<p>
-
-Tell us about your event and the services you need.
-Complete the inquiry form and send it directly to
-our WhatsApp.
+Tell us about your event and our team can discuss
+the right package, services and support for your occasion.
 
 </p>
 
 
-<div class="contact-detail">
+<div class="form-wrap">
 
-<small>PHONE / WHATSAPP</small>
-
-<strong>
-+234 806 026 4514
-</strong>
-
-</div>
-
-
-<div class="contact-detail">
-
-<small>AVAILABLE SERVICES</small>
-
-<strong>
-Planning • Ushers • Security
-</strong>
-
-</div>
-
-
-<div class="contact-detail">
-
-<small>PACKAGES</small>
-
-<strong>
-₦200K • ₦800K • ₦2M
-</strong>
-
-</div>
-
-</div>
-
-
-
-<form
-class="inquiry-form"
-id="inquiryForm"
->
-
-<h3>
-Event Inquiry
-</h3>
+<form id="inquiryForm">
 
 
 <div class="form-grid">
@@ -2371,13 +1970,15 @@ Event Inquiry
 
 <div class="form-group">
 
-<label>FULL NAME</label>
+<label>
+YOUR NAME
+</label>
 
 <input
 type="text"
-id="clientName"
-placeholder="Your full name"
+id="name"
 required
+placeholder="Your full name"
 >
 
 </div>
@@ -2385,13 +1986,15 @@ required
 
 <div class="form-group">
 
-<label>PHONE NUMBER</label>
+<label>
+PHONE NUMBER
+</label>
 
 <input
 type="tel"
-id="clientPhone"
-placeholder="Your phone number"
+id="phone"
 required
+placeholder="080..."
 >
 
 </div>
@@ -2399,7 +2002,9 @@ required
 
 <div class="form-group">
 
-<label>EVENT DATE</label>
+<label>
+EVENT DATE
+</label>
 
 <input
 type="date"
@@ -2412,120 +2017,57 @@ required
 
 <div class="form-group">
 
-<label>EVENT LOCATION</label>
+<label>
+EVENT LOCATION
+</label>
 
 <input
 type="text"
-id="eventLocation"
-placeholder="Event location"
+id="location"
 required
+placeholder="Event location"
 >
 
 </div>
 
 
-<div class="form-group form-full">
+<div class="form-group">
 
-<label>NUMBER OF GUESTS</label>
+<label>
+NUMBER OF GUESTS
+</label>
 
 <input
 type="number"
-id="guestNumber"
-placeholder="e.g. 300"
+id="guests"
+placeholder="Number of guests"
 >
 
 </div>
 
 
-<div class="form-group form-full">
+<div class="form-group">
 
 <label>
-EVENT TYPE — SELECT ALL THAT APPLY
+PACKAGE
 </label>
 
-
-<div class="event-grid">
-
-
-<label class="event-option">
-<input type="checkbox" value="Wedding">
-Wedding
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Birthday">
-Birthday
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Corporate Event">
-Corporate
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Graduation">
-Graduation
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Naming Ceremony">
-Naming
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Engagement">
-Engagement
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Conference">
-Conference
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Dinner">
-Dinner
-</label>
-
-
-<label class="event-option">
-<input type="checkbox" value="Party">
-Party
-</label>
-
-
-</div>
-
-</div>
-
-
-<div class="form-group form-full">
-
-<label>PACKAGE</label>
-
-<select id="selectedPackage">
+<select id="package">
 
 <option value="">
-Select a package
+Select package
 </option>
 
 <option value="Basic - ₦200,000">
-Basic — ₦200,000
+Basic - ₦400,000
 </option>
 
 <option value="Standard - ₦800,000">
-Standard — ₦800,000
+Standard - ₦800,000
 </option>
 
 <option value="Premium - ₦2,000,000">
-Premium — ₦2,000,000
+Premium - ₦2,000,000
 </option>
 
 </select>
@@ -2535,10 +2077,117 @@ Premium — ₦2,000,000
 
 <div class="form-group form-full">
 
-<label>ADDITIONAL MESSAGE</label>
+<label>
+EVENT TYPE
+</label>
+
+
+<div class="event-grid">
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="wedding"
+value="Wedding"
+>
+
+<label for="wedding">
+Wedding
+</label>
+
+</div>
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="birthday"
+value="Birthday"
+>
+
+<label for="birthday">
+Birthday
+</label>
+
+</div>
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="corporate"
+value="Corporate"
+>
+
+<label for="corporate">
+Corporate
+</label>
+
+</div>
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="traditional"
+value="Traditional Event"
+>
+
+<label for="traditional">
+Traditional
+</label>
+
+</div>
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="party"
+value="Party"
+>
+
+<label for="party">
+Party
+</label>
+
+</div>
+
+
+<div class="event-option">
+
+<input
+type="checkbox"
+id="other"
+value="Other Event"
+>
+
+<label for="other">
+Other
+</label>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="form-group form-full">
+
+<label>
+MESSAGE
+</label>
 
 <textarea
-id="clientMessage"
+id="message"
 placeholder="Tell us more about your event..."
 ></textarea>
 
@@ -2562,6 +2211,63 @@ SEND INQUIRY ON WHATSAPP
 
 </div>
 
+</section>
+
+
+
+<!-- =========================
+     CONTACT INFORMATION
+========================= -->
+
+<section
+class="standard"
+>
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+Contact Us
+</h3>
+
+<p>
+Phone: +234 806 026 4514
+</p>
+
+<p>
+WhatsApp: +234 806 026 4514
+</p>
+
+<p>
+Open 24 Hours
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Location
+</h3>
+
+<p>
+
+Shop No. 3 & 4, Ganmo,
+opposite Abiye Hospital,
+Ilorin, Kwara State.
+
+</p>
+
+<p>
+Nigeria
+</p>
+
+</div>
+
+
 </div>
 
 </section>
@@ -2576,30 +2282,13 @@ SEND INQUIRY ON WHATSAPP
 
 <div class="footer-inner">
 
-<div class="footer-logo">
+<p>
+© 2026 PERONNESS USHERING AND GUARD
+</p>
 
-PERONNESS
-
-<span>USHERING & GUARD</span>
-
-</div>
-
-
-<div class="footer-copy">
-
-© 2026 PERONNESS. All Rights Reserved.
-
-</div>
-
-
-<a
-class="footer-phone"
-href="tel:+2348060264514"
->
-
-+234 806 026 4514
-
-</a>
+<p>
+Professional Event Planner
+</p>
 
 </div>
 
@@ -2608,7 +2297,6 @@ href="tel:+2348060264514"
 
 
 <script>
-
 
 /* =========================
    MOBILE MENU
@@ -2647,8 +2335,10 @@ mobileNav.classList.remove("active");
 });
 
 
+
 /* =========================
-   SCROLL VIDEO
+   SCROLL VIDEO + TEXT
+   ANIMATION
 ========================= */
 
 const heroVideo =
@@ -2660,45 +2350,37 @@ document.querySelector(".hero-scroll");
 const heroContent =
 document.getElementById("heroContent");
 
+
 let videoReady = false;
 
-let targetVideoTime = 0;
-
-let animationRunning = false;
+let ticking = false;
 
 
-heroVideo.load();
 
+function clamp(
+value,
+min,
+max
+){
 
-heroVideo.addEventListener(
-"loadedmetadata",
-function(){
+return Math.max(
+min,
+Math.min(
+max,
+value
+)
+);
 
-videoReady = true;
+}
 
-heroVideo.pause();
-
-updateHeroVideo();
-
-});
-
-
-heroVideo.addEventListener(
-"canplay",
-function(){
-
-videoReady = true;
-
-heroVideo.pause();
-
-});
 
 
 function updateHeroVideo(){
 
 if(
-!videoReady ||
-!heroVideo.duration
+!heroVideo ||
+!heroSection ||
+!heroContent
 ){
 
 return;
@@ -2706,13 +2388,28 @@ return;
 }
 
 
-const rect =
-heroSection.getBoundingClientRect();
+/*
+   IMPORTANT:
 
+   The video and the text
+   both use THIS SAME progress.
+
+   So when the page scrolls:
+   video moves forward
+   AND
+   text moves with it.
+*/
 
 const scrollDistance =
+Math.max(
+1,
 heroSection.offsetHeight -
-window.innerHeight;
+window.innerHeight
+);
+
+
+const rect =
+heroSection.getBoundingClientRect();
 
 
 let progress =
@@ -2721,44 +2418,17 @@ scrollDistance;
 
 
 progress =
-Math.max(
+clamp(
+progress,
 0,
-Math.min(
-1,
-progress
-)
+1
 );
 
 
-targetVideoTime =
-progress *
-heroVideo.duration;
 
-
-if(
-Math.abs(
-heroVideo.currentTime -
-targetVideoTime
-) > .02
-){
-
-try{
-
-heroVideo.currentTime =
-targetVideoTime;
-
-}
-catch(error){
-
-console.log(
-"Video seeking error",
-error
-);
-
-}
-
-}
-
+/* =========================
+   TEXT MOVEMENT
+========================= */
 
 const textMove =
 progress * 80;
@@ -2767,7 +2437,9 @@ progress * 80;
 let textOpacity = 1;
 
 
-if(progress > .65){
+if(
+progress > .65
+){
 
 textOpacity =
 1 -
@@ -2792,19 +2464,169 @@ textOpacity
 );
 
 
-animationRunning = false;
+
+/* =========================
+   VIDEO MOVEMENT
+========================= */
+
+if(
+videoReady &&
+Number.isFinite(
+heroVideo.duration
+) &&
+heroVideo.duration > 0
+){
+
+const targetTime =
+progress *
+heroVideo.duration;
+
+
+if(
+Math.abs(
+heroVideo.currentTime -
+targetTime
+) > .015
+){
+
+try{
+
+heroVideo.currentTime =
+targetTime;
+
+}
+catch(error){
+
+}
+
+}
+
+}
 
 }
 
 
-function requestVideoUpdate(){
 
-if(!animationRunning){
+/* =========================
+   PREPARE VIDEO
+========================= */
 
-animationRunning = true;
+function prepareHeroVideo(){
 
-requestAnimationFrame(
-updateHeroVideo
+if(!heroVideo){
+
+return;
+
+}
+
+
+/*
+   Force mobile-friendly
+   video settings.
+*/
+
+heroVideo.muted = true;
+
+heroVideo.setAttribute(
+"muted",
+""
+);
+
+heroVideo.setAttribute(
+"playsinline",
+""
+);
+
+heroVideo.setAttribute(
+"webkit-playsinline",
+""
+);
+
+heroVideo.preload = "auto";
+
+
+
+/* =========================
+   VIDEO READY EVENTS
+========================= */
+
+function markVideoReady(){
+
+videoReady = true;
+
+try{
+
+heroVideo.pause();
+
+}
+catch(error){
+
+}
+
+updateHeroVideo();
+
+}
+
+
+heroVideo.addEventListener(
+"loadedmetadata",
+markVideoReady
+);
+
+
+heroVideo.addEventListener(
+"loadeddata",
+markVideoReady
+);
+
+
+heroVideo.addEventListener(
+"canplay",
+markVideoReady
+);
+
+
+
+/*
+   Tell browser to load
+   hero-video.mp4 immediately.
+*/
+
+heroVideo.load();
+
+
+
+/*
+   Mobile browsers sometimes
+   allow seeking correctly only
+   after playback has started once.
+*/
+
+const startPromise =
+heroVideo.play();
+
+
+if(
+startPromise &&
+typeof startPromise.then === "function"
+){
+
+startPromise.then(
+function(){
+
+heroVideo.pause();
+
+videoReady = true;
+
+updateHeroVideo();
+
+}
+).catch(
+function(){
+
+updateHeroVideo();
+
+}
 );
 
 }
@@ -2812,9 +2634,38 @@ updateHeroVideo
 }
 
 
+
+/* =========================
+   SCROLL REQUEST
+========================= */
+
+function requestHeroUpdate(){
+
+if(ticking){
+
+return;
+
+}
+
+ticking = true;
+
+
+requestAnimationFrame(
+function(){
+
+ticking = false;
+
+updateHeroVideo();
+
+}
+);
+
+}
+
+
 window.addEventListener(
 "scroll",
-requestVideoUpdate,
+requestHeroUpdate,
 {
 passive:true
 }
@@ -2823,26 +2674,70 @@ passive:true
 
 window.addEventListener(
 "resize",
-requestVideoUpdate
+requestHeroUpdate
 );
 
+
+window.addEventListener(
+"orientationchange",
+function(){
+
+setTimeout(
+requestHeroUpdate,
+150
+);
+
+}
+);
+
+
+
+/* =========================
+   PAGE LOAD
+========================= */
 
 window.addEventListener(
 "load",
 function(){
 
+prepareHeroVideo();
+
+
 setTimeout(
 function(){
 
+try{
+
 heroVideo.load();
 
-requestVideoUpdate();
+}
+catch(error){
+
+}
+
+updateHeroVideo();
 
 },
-500
+300
 );
 
 });
+
+
+/*
+   Also prepare immediately
+   if the document is already loaded.
+*/
+
+if(
+document.readyState !==
+"loading"
+){
+
+prepareHeroVideo();
+
+}
+
 
 
 /* =========================
@@ -2864,17 +2759,17 @@ event.preventDefault();
 
 const name =
 document.getElementById(
-"clientName"
+"name"
 ).value;
 
 
 const phone =
 document.getElementById(
-"clientPhone"
+"phone"
 ).value;
 
 
-const date =
+const eventDate =
 document.getElementById(
 "eventDate"
 ).value;
@@ -2882,47 +2777,49 @@ document.getElementById(
 
 const location =
 document.getElementById(
-"eventLocation"
+"location"
 ).value;
 
 
 const guests =
 document.getElementById(
-"guestNumber"
+"guests"
 ).value;
 
 
 const selectedPackage =
 document.getElementById(
-"selectedPackage"
+"package"
 ).value;
-
-
-const selectedEvents=[];
-
-
-document
-.querySelectorAll(
-'.event-option input[type="checkbox"]:checked'
-)
-.forEach(function(item){
-
-selectedEvents.push(
-item.value
-);
-
-});
 
 
 const message =
 document.getElementById(
-"clientMessage"
+"message"
 ).value;
 
 
-const whatsappText =
 
-"Hello PERONNESS USHERING AND GUARD,%0A%0A" +
+const selectedEvents =
+Array.from(
+document.querySelectorAll(
+'.event-option input:checked'
+)
+)
+.map(
+function(input){
+
+return input.value;
+
+}
+)
+.join(", ");
+
+
+
+const whatsappMessage =
+
+"Hello Peronness Ushering and Guard,%0A%0A" +
 
 "I would like to make an event inquiry.%0A%0A" +
 
@@ -2934,46 +2831,34 @@ encodeURIComponent(name) +
 encodeURIComponent(phone) +
 "%0A" +
 
-"Event Type: " +
-encodeURIComponent(
-selectedEvents.join(", ") ||
-"Not selected"
-) +
-"%0A" +
-
-"Package: " +
-encodeURIComponent(
-selectedPackage ||
-"Not selected"
-) +
-"%0A" +
-
 "Event Date: " +
-encodeURIComponent(date) +
+encodeURIComponent(eventDate) +
 "%0A" +
 
-"Event Location: " +
+"Location: " +
 encodeURIComponent(location) +
 "%0A" +
 
 "Number of Guests: " +
-encodeURIComponent(
-guests ||
-"Not specified"
-) +
-"%0A%0A" +
+encodeURIComponent(guests) +
+"%0A" +
 
-"Additional Message:%0A" +
+"Event Type: " +
+encodeURIComponent(selectedEvents) +
+"%0A" +
 
-encodeURIComponent(
-message ||
-"None"
-);
+"Package: " +
+encodeURIComponent(selectedPackage) +
+"%0A" +
+
+"Message: " +
+encodeURIComponent(message);
+
 
 
 const whatsappURL =
 "https://wa.me/2348060264514?text=" +
-whatsappText;
+whatsappMessage;
 
 
 window.open(
@@ -2983,11 +2868,8 @@ whatsappURL,
 
 });
 
-
 </script>
 
 
 </body>
-
 </html>
-```
